@@ -2,50 +2,74 @@ import React from 'react';
 import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import ContactForm from '../components/contact/ContactForm';
-import { Phone, Mail, Clock, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const Contact = () => (
-  <div className="w-full bg-gray-50">
+  <div className="w-full">
     <Navbar />
-    {/* Page Header */}
-    <section className="pt-32 pb-20 bg-agri-dark text-white text-center px-6">
-      <h1 className="text-4xl md:text-6xl font-bold">Contact Our Precision <br /> Farming Experts</h1>
-      <p className="mt-6 opacity-70 max-w-2xl mx-auto">Revolutionizing agriculture through advanced drone technology. Get a free consultation today.</p>
-    </section>
 
-    <section className="py-20">
-      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start">
-        {/* Left: Contact Info */}
-        <div className="space-y-12">
-          <div>
-            <span className="text-agri-green font-bold uppercase tracking-widest text-sm">Get In Touch</span>
-            <h2 className="text-4xl font-bold text-agri-dark mt-4 leading-tight">Let's grow your productivity together.</h2>
-          </div>
-          
-          <div className="grid sm:grid-cols-2 gap-8">
-            <div className="flex gap-4">
-              <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center shrink-0"><Phone className="text-agri-green w-5 h-5"/></div>
-              <div><h4 className="font-bold">Phone</h4><p className="text-sm text-gray-500">+91 98765-43210</p></div>
-            </div>
-            <div className="flex gap-4">
-              <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center shrink-0"><Mail className="text-agri-green w-5 h-5"/></div>
-              <div><h4 className="font-bold">Email</h4><p className="text-sm text-gray-500">hello@skyfeather.in</p></div>
-            </div>
-          </div>
+    {/* Hero split section */}
+    <section className="relative min-h-screen flex items-stretch pt-20">
 
-          <div className="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm flex items-center justify-between">
-            <div className="flex gap-4 items-center">
-              <div className="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center">💬</div>
-              <div><h4 className="font-bold">Chat on WhatsApp</h4><p className="text-xs text-gray-400">Response time: 5 mins</p></div>
-            </div>
-            <button className="bg-agri-green text-white px-6 py-2 rounded-lg font-bold text-sm">Message Now</button>
-          </div>
+      {/* Left — dark bg with image overlay */}
+      <div className="relative hidden lg:flex lg:w-1/2 flex-col justify-between p-14 overflow-hidden">
+        {/* Background image */}
+        <img
+          src="https://images.unsplash.com/photo-1560493676-04071c5f467b?q=70&w=900&auto=format&fit=crop&fm=webp"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-[#0f2b1a]/80" />
+
+        {/* Content */}
+        <div className="relative z-10">
+          <h1 className="text-4xl xl:text-5xl font-extrabold text-white leading-[1.15] mt-16">
+            You Have Questions,<br />We Have Answers
+          </h1>
+          <p className="mt-5 text-white/50 text-sm leading-relaxed max-w-sm">
+            Discover how SkyFeather drone technology can transform your farm operations — thoughtfully designed for UK farmers.
+          </p>
         </div>
 
-        {/* Right: Form */}
-        <ContactForm />
+        <div className="relative z-10 space-y-8">
+          {/* Location */}
+          <div>
+            <p className="text-white/35 text-xs uppercase tracking-widest font-semibold mb-2">Location</p>
+            <div className="flex items-start gap-2">
+              <MapPin size={14} className="text-agri-green mt-0.5 shrink-0" />
+              <p className="text-white/70 text-sm leading-relaxed">
+                SkyFeather Innovations<br />
+                United Kingdom
+              </p>
+            </div>
+          </div>
+
+          {/* Email + Phone */}
+          <div className="grid grid-cols-2 gap-6">
+            <div>
+              <p className="text-white/35 text-xs uppercase tracking-widest font-semibold mb-2">Email</p>
+              <a href="mailto:email@example.com" className="text-white/70 hover:text-agri-green transition text-sm">email@example.com</a>
+            </div>
+            <div>
+              <p className="text-white/35 text-xs uppercase tracking-widest font-semibold mb-2">Contact</p>
+              <a href="tel:5555555555" className="text-white/70 hover:text-agri-green transition text-sm">(555) 555-5555</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Right — form */}
+      <div className="w-full lg:w-1/2 bg-[#f7f8f6] flex items-center justify-center p-8 md:p-14">
+        <div className="w-full max-w-lg">
+          <ContactForm />
+        </div>
       </div>
     </section>
+
     <Footer />
   </div>
 );

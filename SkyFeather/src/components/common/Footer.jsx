@@ -14,12 +14,7 @@ const serviceLinks = [
   { label: 'Multispectral Mapping', href: '/services/multispectral-mapping' },
 ];
 
-const socials = [
-  { icon: Facebook, href: '#', label: 'Facebook' },
-  { icon: Twitter, href: '#', label: 'X' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
-  { icon: Youtube, href: '#', label: 'YouTube' },
-];
+
 
 const Footer = () => (
   <footer className="bg-[#0f2b1a] text-white">
@@ -63,18 +58,7 @@ const Footer = () => (
           Empowering UK farmers with smarter, more efficient farm management through precision drone technology.
         </p>
         {/* Socials */}
-        <div className="flex gap-3">
-          {socials.map(({ icon: Icon, href, label }) => (
-            <a
-              key={label}
-              href={href}
-              aria-label={label}
-              className="w-9 h-9 rounded-xl bg-white/6 hover:bg-agri-green hover:text-[#0f2b1a] flex items-center justify-center transition-all duration-200"
-            >
-              <Icon size={15} />
-            </a>
-          ))}
-        </div>
+       
       </div>
 
       {/* Pages */}
@@ -131,12 +115,12 @@ const Footer = () => (
 
     {/* Bottom bar */}
     <div className="border-t border-white/8">
-      <div className="container mx-auto px-6 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/25">
+      <div className="container mx-auto px-6 py-6 flex flex-col sm:flex-row justify-center items-center gap-4 text-xs text-white/25">
         <p>&copy; 2026 SkyFeather Innovations. All rights reserved.</p>
-        <div className="flex gap-6">
+        {/* <div className="flex gap-6">
           <a href="#" className="hover:text-white/60 transition">Privacy Policy</a>
           <a href="#" className="hover:text-white/60 transition">Terms of Service</a>
-        </div>
+        </div> */}
       </div>
     </div>
 
