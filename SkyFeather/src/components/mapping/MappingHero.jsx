@@ -23,9 +23,11 @@ const MappingHero = () => (
         className="lg:w-1/2 relative"
       >
         <img 
-          src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?q=80&w=1000" 
+          src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?q=70&w=900&auto=format&fit=crop&fm=webp" 
           alt="Drone Mapping" 
           className="rounded-3xl shadow-2xl z-10 relative"
+          loading="lazy"
+          decoding="async"
         />
         {/* Template Style Legend Card */}
         <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur p-4 rounded-xl shadow-xl z-20 border border-white/50">

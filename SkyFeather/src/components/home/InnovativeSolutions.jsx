@@ -77,6 +77,8 @@ const InnovativeSolutions = () => (
           src={innovattionImage}
           alt="Drones flying over a lush green farmland at golden hour"
           className="w-full h-[420px] object-cover object-center"
+          loading="lazy"
+          decoding="async"
         />
       </motion.div>
 

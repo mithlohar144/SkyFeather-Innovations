@@ -69,9 +69,11 @@ const Hero = () => (
       className="w-full px-4 pb-4 md:px-6 md:pb-6"
     >
       <img
-        src="https://images.unsplash.com/photo-1713952160156-bb59cac789a9?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src="https://images.unsplash.com/photo-1713952160156-bb59cac789a9?q=70&w=1200&auto=format&fit=crop&fm=webp"
         alt="Agricultural drone spraying over green tea fields"
         className="w-full h-[300px] md:h-[420px] object-cover rounded-2xl"
+        loading="lazy"
+        decoding="async"
       />
     </motion.div>
   </section>

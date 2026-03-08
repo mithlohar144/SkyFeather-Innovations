@@ -55,6 +55,8 @@ const AboutHero = () => (
             src={PrecisionAgriculture}
             alt="SkyFeather drone farming UK"
             className="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-linear-to-t from-[#0f2b1a]/70 via-transparent to-transparent" />
         </div>

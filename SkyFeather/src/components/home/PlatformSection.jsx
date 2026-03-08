@@ -29,6 +29,8 @@ const PlatformSection = () => (
               src={droneImage}
               alt="Agriculture drone flying over green fields"
               className="rounded-2xl w-full object-cover aspect-[4/3] shadow-lg"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </motion.div>

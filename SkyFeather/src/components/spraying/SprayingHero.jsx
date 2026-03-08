@@ -23,9 +23,11 @@ const SprayingHero = () => (
         className="lg:w-1/2 relative"
       >
         <img 
-          src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?q=80&w=1000" 
+          src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?q=70&w=900&auto=format&fit=crop&fm=webp" 
           alt="Drone Spraying" 
           className="rounded-3xl shadow-2xl"
+          loading="lazy"
+          decoding="async"
         />
         <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-100">
           <p className="text-agri-green font-bold text-2xl">100%</p>

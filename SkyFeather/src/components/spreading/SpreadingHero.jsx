@@ -24,9 +24,11 @@ const SpreadingHero = () => (
         className="lg:w-1/2"
       >
         <img 
-          src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=1000" 
+          src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=70&w=900&auto=format&fit=crop&fm=webp" 
           alt="Drone Spreading" 
           className="rounded-3xl shadow-2xl"
+          loading="lazy"
+          decoding="async"
         />
       </motion.div>
     </div>
