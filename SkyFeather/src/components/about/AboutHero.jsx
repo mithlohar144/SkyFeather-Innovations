@@ -1,65 +1,84 @@
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
-
+import { ArrowUpRight } from 'lucide-react';
+import PrecisionAgriculture from '../../assest/images/PrecisionAgriculture.png'
 const AboutHero = () => (
-  <section className="relative py-28 md:py-36 bg-agri-dark text-white overflow-hidden">
-    {/* Layered background */}
-    <div className="absolute inset-0 bg-gradient-to-br from-agri-dark via-agri-dark/95 to-agri-dark" />
-    <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-agri-green/5 rounded-full blur-3xl" />
-    <div className="absolute bottom-[-100px] right-[-100px] w-[500px] h-[500px] bg-agri-green/3 rounded-full blur-3xl" />
+  <section className="relative overflow-hidden bg-[#0f2b1a] text-white">
+    {/* Background glow */}
+    <div className="absolute top-0 left-0 w-175 h-175 bg-agri-green/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/3 pointer-events-none" />
+    <div className="absolute bottom-0 right-0 w-100 h-100 bg-agri-green/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3 pointer-events-none" />
 
-    <div className="relative z-10 container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-      {/* Left Text */}
+    <div className="relative z-10 container mx-auto px-6 py-28 md:py-36 grid lg:grid-cols-2 gap-16 items-center">
+
+      {/* Left — copy */}
       <motion.div
-        initial={{ opacity: 0, x: -40 }}
-        animate={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
       >
-        <span className="inline-block bg-agri-green/20 text-agri-green px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
-          About SkyFeather
+        <span className="inline-flex items-center gap-2 bg-white/10 text-agri-green border border-agri-green/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-8">
+          <span className="w-1.5 h-1.5 rounded-full bg-agri-green inline-block" />
+          Who we are
         </span>
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-          Where Agriculture{' '}
-          <span className="text-agri-green">Meets Technology</span>
+        <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold leading-[1.15]">
+          Empowering{' '}
+          <span className="text-agri-green">UK Farmers</span>{' '}
+          with Smarter Farm Management
         </h1>
-        <p className="mt-6 text-gray-400 text-lg leading-relaxed max-w-lg">
-          Welcome to SkyFeather Innovations. We are revolutionising farm operations with drone-powered solutions — making precision farming accessible for all farmers, helping you save time, cut costs, and achieve healthier yields.
+        <p className="mt-7 text-white/55 text-[1.05rem] leading-relaxed">
+          Our drones deliver precise crop monitoring, field mapping, and targeted spraying and spreading — giving you actionable insights that save time, reduce waste, and boost yields.
         </p>
-        <div className="mt-8 flex items-center gap-3 text-agri-green">
-          <ArrowDown size={18} className="animate-bounce" />
-          <span className="text-sm font-semibold uppercase tracking-wider">Scroll to learn more</span>
+        <p className="mt-4 text-white/55 text-[1.05rem] leading-relaxed">
+          We combine technology with practical farming expertise to help you make confident decisions and get the most from every acre.
+        </p>
+        <div className="mt-10">
+          <a
+            href="/contact"
+            className="inline-flex items-center gap-3 bg-agri-green text-[#0f2b1a] font-bold px-7 py-3.5 rounded-full hover:brightness-110 transition"
+          >
+            Work With Us
+            <span className="w-8 h-8 bg-[#0f2b1a]/15 rounded-full flex items-center justify-center">
+              <ArrowUpRight size={16} />
+            </span>
+          </a>
         </div>
       </motion.div>
 
-      {/* Right Stats Grid */}
+      {/* Right — image */}
       <motion.div
-        initial={{ opacity: 0, x: 40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7, delay: 0.2 }}
-        className="grid grid-cols-2 gap-4"
+        initial={{ opacity: 0, scale: 0.96 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="relative"
       >
-        {[
-          { value: '2019', label: 'Year Founded', accent: false },
-          { value: '500+', label: 'Farms Served', accent: true },
-          { value: '50K+', label: 'Acres Covered', accent: true },
-          { value: '25+', label: 'Team Members', accent: false },
-        ].map((stat, i) => (
-          <div
-            key={i}
-            className={`p-8 rounded-2xl text-center ${
-              stat.accent
-                ? 'bg-agri-green text-white'
-                : 'bg-white/5 border border-white/10'
-            }`}
-          >
-            <p className={`text-3xl md:text-4xl font-bold ${stat.accent ? 'text-white' : 'text-agri-green'}`}>
-              {stat.value}
-            </p>
-            <p className={`text-xs mt-2 uppercase tracking-wider font-semibold ${stat.accent ? 'text-white/80' : 'text-gray-400'}`}>
-              {stat.label}
-            </p>
-          </div>
-        ))}
+        <div className="relative rounded-3xl overflow-hidden h-105 lg:h-120">
+          <img
+            src={PrecisionAgriculture}
+            alt="SkyFeather drone farming UK"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-linear-to-t from-[#0f2b1a]/70 via-transparent to-transparent" />
+        </div>
+
+        {/* Floating stat */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
+          className="absolute bottom-6 left-6 bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl px-5 py-4"
+        >
+          <p className="text-agri-green font-extrabold text-2xl">500+</p>
+          <p className="text-white/50 text-xs uppercase tracking-wider mt-0.5">UK Farms Served</p>
+        </motion.div>
+
+        {/* Floating tag top-right */}
+        <motion.div
+          initial={{ opacity: 0, y: -12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.5 }}
+          className="absolute top-6 right-6 bg-agri-green text-[#0f2b1a] font-bold text-xs uppercase tracking-wider px-4 py-2 rounded-full"
+        >
+          Precision Agriculture
+        </motion.div>
       </motion.div>
     </div>
   </section>

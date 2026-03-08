@@ -13,13 +13,6 @@ const values = [
   { icon: Users, title: 'Farmer Focused', desc: 'We listen to farmers and build tools that solve real problems in the field.' },
 ];
 
-const timeline = [
-  { year: '2019', title: 'Founded', desc: 'SkyFeather Innovations was born from a passion for agriculture and technology.' },
-  { year: '2020', title: 'First 100 Farms', desc: 'Completed drone spraying operations across 100 farms in our first full year.' },
-  { year: '2022', title: 'Mapping Launch', desc: 'Introduced multispectral mapping services with NDVI health analysis.' },
-  { year: '2024', title: 'Spreading Services', desc: 'Expanded into granular spreading for seeds, fertilizers, and cover crops.' },
-  { year: '2026', title: '500+ Farms', desc: 'Serving over 500 farms nationwide with a growing team of 25+ specialists.' },
-];
 
 const About = () => {
   return (
@@ -30,64 +23,64 @@ const About = () => {
         <MissionVision />
 
         {/* Our Values */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-6 text-center">
-            <span className="text-agri-green font-bold uppercase tracking-widest text-sm">What Drives Us</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-agri-dark mt-3 mb-16">Our Core Values</h2>
+        <section className="py-28 bg-white overflow-hidden">
+          <div className="container mx-auto px-6">
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Header row */}
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+              <div>
+                <span className="inline-flex items-center gap-2 text-agri-green font-bold uppercase tracking-widest text-xs mb-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-agri-green" />
+                  What Drives Us
+                </span>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-agri-dark leading-tight">
+                  Our Core Values
+                </h2>
+              </div>
+              <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+                The principles behind every decision, every flight, and every farm we serve.
+              </p>
+            </div>
+
+            {/* Cards */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {values.map((item, idx) => (
                 <motion.div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 28 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="p-8 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-agri-green/30 transition-all group"
-                >
-                  <div className="w-14 h-14 bg-agri-green/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-agri-green/20 transition">
-                    <item.icon className="text-agri-green w-7 h-7" />
-                  </div>
-                  <h4 className="text-lg font-bold text-agri-dark mb-2">{item.title}</h4>
-                  <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Our Journey Timeline */}
-        <section className="py-24 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <span className="text-agri-green font-bold uppercase tracking-widest text-sm">Our Story</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-agri-dark mt-3">The SkyFeather Journey</h2>
-            </div>
-
-            <div className="relative max-w-3xl mx-auto">
-              {/* Vertical line */}
-              <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-agri-green/20 -translate-x-1/2" />
-
-              {timeline.map((item, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className={`relative flex items-start gap-6 mb-12 md:w-1/2 ${
-                    idx % 2 === 0 ? 'md:mr-auto md:pr-12 md:text-right' : 'md:ml-auto md:pl-12'
+                  transition={{ delay: idx * 0.1, duration: 0.5 }}
+                  className={`group relative flex flex-col gap-6 p-7 rounded-3xl transition-all duration-300 overflow-hidden ${
+                    idx === 0
+                      ? 'bg-[#0f2b1a] text-white'
+                      : 'bg-[#f7f8f6] hover:shadow-lg'
                   }`}
                 >
-                  {/* Dot */}
-                  <div className="absolute left-6 md:left-auto md:right-auto top-1 w-3 h-3 bg-agri-green rounded-full ring-4 ring-agri-green/20 z-10 md:left-1/2 md:-translate-x-1/2"
-                    style={{ [idx % 2 === 0 ? 'right' : 'left']: '-1.6rem' }}
-                  />
+                  {/* Ghost number */}
+                  <span className={`absolute top-5 right-6 text-6xl font-extrabold leading-none select-none pointer-events-none ${
+                    idx === 0 ? 'text-white/6' : 'text-agri-dark/5'
+                  }`}>
+                    {String(idx + 1).padStart(2, '0')}
+                  </span>
 
-                  <div className="pl-10 md:pl-0">
-                    <span className="text-agri-green font-bold text-sm">{item.year}</span>
-                    <h4 className="text-lg font-bold text-agri-dark mt-1">{item.title}</h4>
-                    <p className="text-gray-500 text-sm mt-1 leading-relaxed">{item.desc}</p>
+                  {/* Icon */}
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                    idx === 0
+                      ? 'bg-agri-green/20'
+                      : 'bg-agri-green/10 group-hover:bg-agri-green/20 transition'
+                  }`}>
+                    <item.icon className="text-agri-green w-6 h-6" />
+                  </div>
+
+                  {/* Text */}
+                  <div>
+                    <h4 className={`text-lg font-extrabold mb-2 ${idx === 0 ? 'text-white' : 'text-agri-dark'}`}>
+                      {item.title}
+                    </h4>
+                    <p className={`text-sm leading-relaxed ${idx === 0 ? 'text-white/50' : 'text-gray-500'}`}>
+                      {item.desc}
+                    </p>
                   </div>
                 </motion.div>
               ))}

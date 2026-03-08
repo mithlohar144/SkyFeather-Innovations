@@ -14,8 +14,8 @@ const Footer = () => {
                 <span className="text-white font-bold italic text-lg">S</span>
               </div>
               <div>
-                <span className="text-xl font-bold tracking-tight block leading-tight">SkyFeather</span>
-                <span className="text-xs text-gray-400 leading-tight">Innovations</span>
+                <span className="text-xl font-bold tracking-tight block leading-tight">SkyFeather Innovations</span>
+                
               </div>
             </div>
             <div className="flex items-start gap-2 text-gray-400 text-sm max-w-sm">

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-
+import innovattionImage from '../../assest/images/drone_farmer.png'
 const features = [
   {
     title: 'Precision Farming Tools',
@@ -31,8 +31,8 @@ const InnovativeSolutions = () => (
           viewport={{ once: true }}
           className="max-w-lg"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-agri-dark leading-tight">
-            Innovative Solutions for<br />Modern Farming
+          <h2 className="text-4xl md:text-5xl font-extralight text-agri-dark leading-tight">
+            Innovative Solutions for Modern Farming
           </h2>
         </motion.div>
 
@@ -41,7 +41,7 @@ const InnovativeSolutions = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-gray-500 text-base leading-relaxed max-w-xs lg:text-right"
+          className="text-gray-500 text-base font-semibold leading-relaxed max-w-xs lg:text-right"
         >
           Our planet's population is growing rapidly and so is the need for more food. SkyFeather is here to make farming smarter, more efficient, and sustainable.
         </motion.p>
@@ -74,7 +74,7 @@ const InnovativeSolutions = () => (
         className="rounded-3xl overflow-hidden shadow-xl mb-14"
       >
         <img
-          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1600"
+          src={innovattionImage}
           alt="Drones flying over a lush green farmland at golden hour"
           className="w-full h-[420px] object-cover object-center"
         />

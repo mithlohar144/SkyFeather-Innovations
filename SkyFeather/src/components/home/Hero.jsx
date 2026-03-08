@@ -1,90 +1,78 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, ArrowRight } from 'lucide-react';
 
 const Hero = () => (
-  <section className="relative min-h-screen overflow-hidden">
-    {/* Full-screen background image */}
-    <div className="absolute inset-0">
-      <img
-        src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?q=80&w=1920"
-        alt="Drone spraying over green farmland"
-        className="w-full h-full object-cover"
-      />
-      {/* Dark gradient overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-    </div>
+  <section className="bg-[#0f2b1a] overflow-hidden">
+    {/* Text area */}
+    <div className="relative container mx-auto px-6 pt-28 pb-10">
 
-    {/* Content */}
-    <div className="relative z-10 container mx-auto px-6 min-h-screen flex flex-col justify-end pb-24 pt-32">
-      {/* Floating drone image */}
-      <motion.img
-        src="https://png.pngtree.com/png-clipart/20231019/original/pngtree-agriculture-drone-spraying-pesticide-on-wheat-field-drone-fly-farm-png-image_13369407.png"
-        alt="Agriculture drone"
-        initial={{ opacity: 0, y: -30, x: 20 }}
-        animate={{ opacity: 1, y: 0, x: 0 }}
-        transition={{ duration: 1, delay: 0.4 }}
-        className="absolute top-1/2 right-8 -translate-y-1/2 w-[320px] md:w-[480px] lg:w-[580px] drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] pointer-events-none hidden md:block select-none"
-      />
-
-      <div className="flex flex-col lg:flex-row items-end justify-between w-full gap-10">
-        {/* Left: Headline */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-2xl"
-        >
-          <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.05] italic tracking-tight">
-            Professional Drone<br />
-            Solution Provider
-          </h1>
-          <p className="text-white/80 mt-5 text-lg leading-relaxed max-w-md">
-            Empowering precision agriculture through advanced drone technology — saving time, cutting costs, and delivering healthier yields.
-          </p>
-          {/* Accent bar */}
-          <div className="w-12 h-1 bg-agri-green rounded-full mt-6" />
-        </motion.div>
-
-        {/* Right: Featured service card */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="hidden md:flex bg-white/95 backdrop-blur rounded-2xl shadow-2xl overflow-hidden max-w-sm"
-        >
-          <div className="p-6 flex flex-col justify-center">
-            <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold">Our Services</p>
-            <p className="text-xl font-bold text-agri-dark mt-1">Spraying &middot; Mapping &middot; Spreading</p>
-            <a
-              href="/services"
-              className="inline-flex items-center gap-2 mt-4 bg-agri-green text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-green-700 transition w-fit"
-            >
-              Learn More <ArrowRight size={14} />
-            </a>
-          </div>
-          <img
-            src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?q=80&w=300"
-            alt="Agriculture drone"
-            className="w-36 h-auto object-cover"
-          />
-        </motion.div>
+      {/* Circular rotating badge — top right */}
+      <div className="hidden md:flex absolute top-24 right-6 shrink-0 w-28 h-28 items-center justify-center">
+        <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full animate-[spin_14s_linear_infinite]">
+          <path id="heroBadgePath" fill="none" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" />
+          <text fill="#a3e635" fontSize="8.5" letterSpacing="2.8">
+            <textPath href="#heroBadgePath">Best Drone Agriculture Platform ★ </textPath>
+          </text>
+        </svg>
+        <div className="w-16 h-16 rounded-full border border-white/25 flex items-center justify-center z-10">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </div>
       </div>
+
+      {/* Top label */}
+
+
+      {/* Heading */}
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
+        className="text-white font-light leading-[1.1] max-w-2xl "
+        style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)' }}
+      >
+        Precision Farming
+        <span className="flex gap-2 items-center mt-4">
+          Using Drones:{' '}
+          <span className="relative inline-block rotate-10" >
+            <span className="relative z-10 text-4xl flex text-center px-4 py-3 font-light text-[#a3e635]">Technology</span>
+            <span className="absolute inset-0 bg-[#a3e635]/15 rounded-3xl -skew-x-6 z-0" />
+          </span>
+        </span>
+      </motion.h1>
+
+
+      {/* CTA Button */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.3 }}
+        className="mt-8 mb-2"
+      >
+        <a
+          href="/contact"
+          className="inline-flex items-center gap-2.5 border border-[#a3e635] text-[#a3e635] pl-5 pr-2 py-2 rounded-full text-sm font-semibold hover:bg-[#a3e635] hover:text-[#0f2b1a] transition-colors"
+        >
+          Start Free Trial
+          <span className="w-7 h-7 rounded-full bg-[#a3e635] text-[#0f2b1a] flex items-center justify-center font-bold">
+            ↗
+          </span>
+        </a>
+      </motion.div>
     </div>
 
-    {/* Scroll indicator */}
+    {/* Full-width hero image */}
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 1.2 }}
-      className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9, delay: 0.35 }}
+      className="w-full px-4 pb-4 md:px-6 md:pb-6"
     >
-      <a
-        href="#services"
-        className="w-12 h-12 rounded-full bg-agri-dark/80 border-2 border-white/30 flex items-center justify-center hover:bg-agri-green transition-all"
-      >
-        <ArrowDown size={20} className="text-white animate-bounce" />
-      </a>
+      <img
+        src="https://images.unsplash.com/photo-1713952160156-bb59cac789a9?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Agricultural drone spraying over green tea fields"
+        className="w-full h-[300px] md:h-[420px] object-cover rounded-2xl"
+      />
     </motion.div>
   </section>
 );

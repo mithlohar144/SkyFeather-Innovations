@@ -5,7 +5,7 @@ import Hero from '../components/home/Hero';
 import ServiceGrid from '../components/home/ServiceGrid';
 import PlatformSection from '../components/home/PlatformSection';
 import InnovativeSolutions from '../components/home/InnovativeSolutions';
-import HowItWorks from '../components/home/HowItWorks';
+
 
 const Home = () => {
   return (
@@ -15,7 +15,7 @@ const Home = () => {
       <ServiceGrid />
       <PlatformSection />
       <InnovativeSolutions />
-      <HowItWorks />
+      
       <Footer />
     </div>
   );
