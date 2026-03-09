@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight, Droplets, Target, Sprout } from 'lucide-react';
 import DroneSpraying from '../../assest/images/Drone-Spraying1.jpg'
 import DroneSpreading from '../../assest/images/DroneSpreading.webp'
-import MultispectralMapping from '../../assest/images/MultispectralMapping.webp'
+import MultispectralMapping from '../../assest/images/mapping.avif'
 const services = [
   {
     title: "Drone Spraying",

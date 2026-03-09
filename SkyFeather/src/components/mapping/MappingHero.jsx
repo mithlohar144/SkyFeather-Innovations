@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import mapping from '../../assest/images/mapping.avif';
 
 const MappingHero = () => (
   <section className="relative py-20 bg-white overflow-hidden">
@@ -7,14 +8,16 @@ const MappingHero = () => (
       <div className="lg:w-1/2 z-10">
         <span className="bg-green-100 text-agri-green px-4 py-1 rounded-full text-xs font-bold uppercase">Precision Agriculture</span>
         <h1 className="text-5xl font-bold text-agri-dark mt-6 leading-tight">
-          Advanced <span className="text-agri-green">Multispectral Mapping</span>
+          <span className="text-agri-green">Multispectral Mapping</span>
         </h1>
+        <h2 className="text-2xl md:text-3xl font-semibold text-agri-dark mt-4">
+          Providing Everything You Need
+        </h2>
         <p className="text-gray-600 mt-6 text-lg leading-relaxed">
-          Data-driven insights for crop health. Leverage high-resolution aerial data to identify issues before they become visible, optimizing every acre of your harvest.
+          Capture high-confidence field intelligence with vegetation indices, weed treatment mapping, and digital surface models that support faster, more precise decisions.
         </p>
         <div className="flex gap-4 mt-10">
-          <button className="bg-agri-green text-white px-8 py-3 rounded-lg font-bold shadow-lg hover:bg-green-700 transition-all">Get Started</button>
-          <button className="border border-gray-300 text-agri-dark px-8 py-3 rounded-lg font-bold hover:bg-gray-50 transition-all">View Sample Report</button>
+          <a href="/contact" className="bg-agri-green text-white px-8 py-3 rounded-lg font-bold shadow-lg hover:bg-green-700 transition-all">Get Started</a>
         </div>
       </div>
       <motion.div 
@@ -23,8 +26,8 @@ const MappingHero = () => (
         className="lg:w-1/2 relative"
       >
         <img 
-          src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?q=70&w=900&auto=format&fit=crop&fm=webp" 
-          alt="Drone Mapping" 
+          src={mapping}
+          alt="Multispectral mapping drone survey" 
           className="rounded-3xl shadow-2xl z-10 relative"
           loading="lazy"
           decoding="async"

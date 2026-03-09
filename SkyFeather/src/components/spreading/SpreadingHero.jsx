@@ -13,9 +13,7 @@ const SpreadingHero = () => (
         <p className="text-gray-600 mt-6 text-lg leading-relaxed">
           High-efficiency drone solutions for seeds, fertilizers, and granular applications with zero soil compaction. Boost your yields with surgical accuracy.
         </p>
-        <div className="flex gap-4 mt-10">
-          <button className="bg-agri-green text-white px-8 py-3 rounded-lg font-bold shadow-lg">Book a Demo</button>
-        </div>
+
       </div>
       <motion.div 
         initial={{ opacity: 0, scale: 0.9 }}

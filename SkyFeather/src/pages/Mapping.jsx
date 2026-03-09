@@ -2,47 +2,74 @@ import React from 'react';
 import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import MappingHero from '../components/mapping/MappingHero';
-import ComparisonSlider from '../components/mapping/ComparisonSlider';
-import { motion } from 'framer-motion';
-
+import mapping from '../assest/images/mapping.avif';
+import mapping2 from '../assest/images/mapping2.avif';
+import mapping3 from '../assest/images/mapping3.avif';
 const Mapping = () => {
+  const mappingSections = [
+    {
+      title: 'Vegetation Index Maps',
+      imageLabel: 'Plant Health_edited_edited.jpg',
+      imageAlt: 'Vegetation index map of crop health',
+      imageSrc: mapping,
+      description:
+        'Using multispectral mapping, our drones can create detailed vegetation indices that highlight crop and plant health across your fields. This shows which areas are growing well, and which may be under stress or could benefit from extra nutrients.'
+    },
+    {
+      title: 'Weed Treatment Maps',
+      imageLabel: 'Green Fields',
+      imageAlt: 'RGB weed detection map across crop rows',
+      imageSrc: mapping2,
+      description:
+        'Using high-resolution RGB imagery with precise positioning, our drones can identify and map weeds across all crop types. This allows us to produce coverage reports and treatment maps, so spraying or section-controlled machinery only targets the areas that need it, saving time, inputs, and reducing environmental impact.'
+    },
+    {
+      title: 'Digital Surface Maps',
+      imageLabel: 'Crop Field Aerial Shot',
+      imageAlt: 'Digital surface model generated from aerial mapping',
+      imageSrc: mapping3,
+      description:
+        'Every time our drones fly a field, we create a digital surface map (DSM) that shows changes in land height. This helps identify low areas, track how water will flow, and predict potential runoff or erosion spots.',
+      extraDescription:
+        'The DSM can also be used to measure stockpile volumes, calculate cut and fill for earthworks, or plan drainage and land grading. All data is ready to be used in CAD software or directly with grading machinery, making planning and field work more efficient.'
+    }
+  ];
+
   return (
     <div className="w-full">
       <Navbar />
       <div className="pt-20">
         <MappingHero />
-        
-        {/* Info Section from Template */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6 max-w-4xl text-center">
-            <h2 className="text-3xl font-bold text-agri-dark mb-6">What is Multispectral Mapping?</h2>
-            <p className="text-gray-600 leading-relaxed text-lg">
-              Our advanced sensors capture data beyond the visible spectrum, identifying issues in crop health weeks before they are visible to the naked eye. By measuring reflected light in specific bands (NIR, Red Edge, and RGB), we generate precise health indices like NDVI.
-            </p>
-          </div>
-        </section>
 
-        <ComparisonSlider />
+        <section className="bg-[#e8e8ea] py-10 md:py-14">
+          <div className="w-full max-w-7xl mx-auto px-4 md:px-8 space-y-8">
+            {mappingSections.map((section, index) => {
+              const reverseDesktop = index % 2 === 1;
 
-        {/* Process Section */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-16">Our Simple Process</h2>
-            <div className="grid md:grid-cols-3 gap-12">
-              {[
-                { step: "Data Capture", icon: "🚁", desc: "We deploy autonomous drones equipped with professional sensors to scan your acreage." },
-                { step: "Cloud Processing", icon: "☁️", desc: "Captured images are processed through our cloud AI to stitch maps and calculate health indices." },
-                { step: "Actionable Reports", icon: "📊", desc: "Receive comprehensive reports with prescription maps ready to load into your farming equipment." }
-              ].map((item, i) => (
-                <div key={i}>
-                  <div className="w-20 h-20 bg-agri-green rounded-full flex items-center justify-center mx-auto mb-6 text-3xl shadow-lg shadow-green-100">
-                    {item.icon}
+              return (
+                <article key={section.title} className="grid grid-cols-1 lg:grid-cols-2 min-h-105 rounded-2xl overflow-hidden">
+                  <figure className={ reverseDesktop ? 'lg:order-2' : ''}>
+                    <img
+                      src={section.imageSrc}
+                      alt={section.imageAlt}
+                      className="w-full h-70 rounded-2xl lg:h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+
+                  <div className={`flex items-center justify-center px-8 md:px-14 py-12 lg:py-16 ${reverseDesktop ? 'lg:order-1' : ''}`}>
+                    <div className="max-w-md text-center">
+                      <h3 className="text-3xl font-bold text-agri-dark mb-6">{section.title}</h3>
+                      <p className="text-gray-700 leading-relaxed mb-5">{section.description}</p>
+                      {section.extraDescription && (
+                        <p className="text-gray-700 leading-relaxed">{section.extraDescription}</p>
+                      )}
+                    </div>
                   </div>
-                  <h4 className="text-xl font-bold mb-2">{item.step}</h4>
-                  <p className="text-gray-500 text-sm">{item.desc}</p>
-                </div>
-              ))}
-            </div>
+                </article>
+              );
+            })}
           </div>
         </section>
       </div>
