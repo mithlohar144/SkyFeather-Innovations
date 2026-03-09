@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Droplets, Target, Sprout } from 'lucide-react';
-import DroneSpraying from '../../assest/images/Drone-Spraying.jpg'
+import DroneSpraying from '../../assest/images/Drone-Spraying1.jpg'
 import DroneSpreading from '../../assest/images/DroneSpreading.png'
 import MultispectralMapping from '../../assest/images/MultispectralMapping.png'
 const services = [
@@ -10,7 +10,7 @@ const services = [
     icon: Droplets,
     link: "/services/drone-spraying",
     image: DroneSpraying,
-    tag: "Most Popular",
+    
   },
   {
     title: "Drone Spreading",
@@ -18,7 +18,7 @@ const services = [
     icon: Sprout,
     link: "/services/drone-spreading",
     image: DroneSpreading,
-    tag: null,
+    
   },
   {
     title: "Multispectral Mapping",
@@ -26,7 +26,7 @@ const services = [
     icon: Target,
     link: "/services/multispectral-mapping",
     image: MultispectralMapping,
-    tag: "AI Powered",
+    
   },
 ];
 

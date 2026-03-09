@@ -34,31 +34,16 @@ const Hero = () => (
         Precision Farming
         <span className="flex gap-2 items-center mt-4">
           Using Drones:{' '}
-          <span className="relative inline-block rotate-10" >
+          <span className="relative inline-block" >
             <span className="relative z-10 text-4xl flex text-center px-4 py-3 font-light text-[#a3e635]">Technology</span>
-            <span className="absolute inset-0 bg-[#a3e635]/15 rounded-3xl -skew-x-6 z-0" />
+            <span className="absolute inset-0 bg-[#a3e635]/15 rounded-3xl z-0" />
           </span>
         </span>
       </motion.h1>
 
 
       {/* CTA Button */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.3 }}
-        className="mt-8 mb-2"
-      >
-        <a
-          href="/contact"
-          className="inline-flex items-center gap-2.5 border border-[#a3e635] text-[#a3e635] pl-5 pr-2 py-2 rounded-full text-sm font-semibold hover:bg-[#a3e635] hover:text-[#0f2b1a] transition-colors"
-        >
-          Start Free Trial
-          <span className="w-7 h-7 rounded-full bg-[#a3e635] text-[#0f2b1a] flex items-center justify-center font-bold">
-            ↗
-          </span>
-        </a>
-      </motion.div>
+      
     </div>
 
     {/* Full-width hero image */}
