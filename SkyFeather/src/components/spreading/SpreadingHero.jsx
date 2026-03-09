@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import spreadingHeroImage from '../../assest/images/DroneSpreading.webp';
 
 const SpreadingHero = () => (
   <section className="py-20 bg-white">
@@ -7,11 +8,13 @@ const SpreadingHero = () => (
       <div className="lg:w-1/2">
         <span className="bg-green-100 text-agri-green px-4 py-1 rounded-full text-xs font-bold uppercase">Professional Spreading Services</span>
         <h1 className="text-5xl font-bold text-agri-dark mt-6 leading-tight">
-          Precision Spreading. <br />
-          <span className="text-agri-green">Maximum Growth.</span>
+          <span className="text-agri-green">Drone Spreading</span>
         </h1>
+        <h2 className="text-2xl md:text-3xl font-semibold text-agri-dark mt-4">
+          Providing Everything You Need
+        </h2>
         <p className="text-gray-600 mt-6 text-lg leading-relaxed">
-          High-efficiency drone solutions for seeds, fertilizers, and granular applications with zero soil compaction. Boost your yields with surgical accuracy.
+          Aerial spreading for seeds, fertilisers, and specialist pelleted products with accurate coverage and zero heavy machinery compaction.
         </p>
 
       </div>
@@ -21,8 +24,8 @@ const SpreadingHero = () => (
         className="lg:w-1/2"
       >
         <img 
-          src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=70&w=900&auto=format&fit=crop&fm=webp" 
-          alt="Drone Spreading" 
+          src={spreadingHeroImage}
+          alt="Drone spreading services over agricultural fields" 
           className="rounded-3xl shadow-2xl"
           loading="lazy"
           decoding="async"

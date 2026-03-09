@@ -2,34 +2,85 @@ import React from 'react';
 import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import SpreadingHero from '../components/spreading/SpreadingHero';
-import TechSpecs from '../components/spreading/TechSpecs';
+import spreadingImageOne from '../assest/images/crop.avif';
+import spreadingImageTwo from '../assest/images/fertiliser.avif';
+import spreadingImageThree from '../assest/images/pelleted.avif';
 
 const Spreading = () => {
+  const spreadingSections = [
+    {
+      title: 'Cover Crops & Other Seeds',
+      imageAlt: 'Hands holding grains ready for aerial spreading',
+      imageSrc: spreadingImageOne,
+      imageLabels: ['Hands Holding Grains', 'Hands Holding Grains'],
+      description:
+        'Our drones can broadcast a wide range of seeds, from cover crops and catch crops to grass, oilseed rape, wildflowers, and even trees, all from the air.',
+      extraDescription:
+        'Since we do not need to drive on the land, seeds can be sown directly into standing crops like cereals, pulses, or maize, or onto fields after wet harvests that would be difficult to access with machinery. This method avoids soil compaction, ruts, and muddy tracks, making planting faster and less disruptive.'
+    },
+    {
+      title: 'Fertiliser',
+      imageAlt: 'Agricultural gardens and crop area for fertiliser spreading',
+      imageSrc: spreadingImageTwo,
+      imageLabels: ['Agricultural Gardens', 'Field at Sunset'],
+      description:
+        'Our drones can apply all types of fertilisers, from granular to liquid, entirely from the air. This avoids soil compaction, ruts, and muddy tracks, and allows crops to receive treatment exactly when they need it, without waiting for ground conditions suitable for heavy machinery.'
+    },
+    {
+      title: 'Pelleted Natural Products',
+      imageAlt: 'Aerial agricultural field for pelleted natural product application',
+      imageSrc: spreadingImageThree,
+      imageLabels: ['Agricultural Gardens'],
+      description:
+        'In addition to conventional fertilisers and standard granular products, our drones can also spread pelleted materials such as fungal pellets, biochar, and other specialty products.',
+      extraDescription:
+        'The drones are easy to calibrate, making it simple to set up new products and ensure accurate application every time.',
+      thirdDescription:
+        'Many natural pellets need to be applied when the ground is wet so they break down over the winter. Using drones for this helps avoid soil compaction and ruts, making it possible to treat fields safely even in challenging conditions.'
+    }
+  ];
+
   return (
     <div className="w-full">
       <Navbar />
       <div className="pt-20">
         <SpreadingHero />
-        <TechSpecs />
 
-        {/* Core Benefits */}
-        <section className="py-24 bg-gray-50">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-16 text-agri-dark">Why Drone Spreading?</h2>
-            <div className="grid md:grid-cols-4 gap-8">
-              {[
-                { title: 'Zero Compaction', icon: '🌍', desc: 'No heavy machinery on your soil.' },
-                { title: 'Any Terrain', icon: '⛰️', desc: 'Hilly, muddy, or uneven — no problem.' },
-                { title: 'Variable Rate', icon: '⚙️', desc: 'GPS-guided variable-rate application.' },
-                { title: 'Cost Effective', icon: '💰', desc: 'Lower operational costs per hectare.' },
-              ].map((item, i) => (
-                <div key={i} className="p-8 border border-gray-100 rounded-2xl bg-white hover:shadow-lg transition">
-                  <div className="text-3xl mb-4">{item.icon}</div>
-                  <h4 className="font-bold text-agri-dark mb-2">{item.title}</h4>
-                  <p className="text-gray-500 text-sm">{item.desc}</p>
-                </div>
-              ))}
-            </div>
+        <section className="bg-[#e8e8ea] py-10 md:py-14">
+          <div className="w-full max-w-7xl mx-auto px-4 md:px-8 space-y-8">
+            {spreadingSections.map((section, index) => {
+              const reverseDesktop = index % 2 === 1;
+
+              return (
+                <article key={section.title} className="grid grid-cols-1 lg:grid-cols-2 min-h-105 rounded-2xl overflow-hidden">
+                  <figure className={reverseDesktop ? 'lg:order-2' : ''}>
+                    <img
+                      src={section.imageSrc}
+                      alt={section.imageAlt}
+                      className="w-full rounded-2xl h-70 lg:h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <figcaption className="px-4 py-3 text-sm text-gray-600 bg-white/80">
+                      {section.imageLabels.join(' | ')}
+                    </figcaption>
+                  </figure>
+
+                  <div className={`flex items-center justify-center px-8 md:px-14 py-12 lg:py-16 bg-[#e8e8ea] ${reverseDesktop ? 'lg:order-1' : ''}`}>
+                    <div className="max-w-md text-center">
+                      <h3 className="text-3xl  text-agri-dark mb-6">{section.title}</h3>
+                      <p className="text-gray-700 font-semibold leading-relaxed mb-5">{section.description}</p>
+                      {section.extraDescription && (
+                        <p className="text-gray-700 font-medium leading-relaxed mb-5">{section.extraDescription}</p>
+                      )}
+                      {section.thirdDescription && (
+                        <p className="text-gray-700 font-medium leading-relaxed">{section.thirdDescription}</p>
+                      )}
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </section>
       </div>
