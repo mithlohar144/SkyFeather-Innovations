@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import innovattionImage from '../../assest/images/drone_farmer.png'
+import DroneSpraying1  from '../../assest/images/Drone-Spraying1.jpg'
 const features = [
   {
     title: 'Precision Farming Tools',

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import droneImage from '../../assest/images/drone.png'
+import spreying2 from '../../assest/images/spreying2.avif'
 const PlatformSection = () => (
   <section className="py-28 bg-gray-50">
     <div className="container mx-auto px-6">
@@ -26,7 +27,7 @@ const PlatformSection = () => (
         >
           <div className="bg-blue-100/40 rounded-3xl p-4 md:p-6">
             <img
-              src={droneImage}
+              src={spreying2}
               alt="Agriculture drone flying over green fields"
               className="rounded-2xl w-full object-cover aspect-[4/3] shadow-lg"
               loading="lazy"
