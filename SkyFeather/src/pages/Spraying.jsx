@@ -19,7 +19,7 @@ const Spraying = () => {
             <div className="grid md:grid-cols-4 gap-8">
               {[
                 { title: "Reduced Waste", icon: "🍃" },
-                { title: "Operator Safety", icon: "🛡️" },
+                { title: "Reliable Operations", icon: "✅" },
                 { title: "Variable Rate", icon: "⚙️" },
                 { title: "Any Terrain", icon: "⛰️" }
               ].map((item, i) => (

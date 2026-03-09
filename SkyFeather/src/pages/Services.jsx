@@ -18,8 +18,7 @@ const Services = () => (
         <h2 className="text-3xl font-bold">Ready to optimize your farm?</h2>
         <p className="mt-4 opacity-90">Join hundreds of forward-thinking farmers who are scaling their operations.</p>
         <div className="flex justify-center gap-4 mt-8">
-          <button className="bg-white text-agri-green px-8 py-3 rounded-lg font-bold">Contact Us</button>
-          <button className="border border-white text-white px-8 py-3 rounded-lg font-bold">View Pricing</button>
+          <a href="/contact" className="bg-white text-agri-green px-8 py-3 rounded-lg font-bold">Contact Us</a>
         </div>
       </section>
     </div>

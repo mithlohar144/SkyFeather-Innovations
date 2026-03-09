@@ -5,22 +5,22 @@ const reasons = [
   {
     icon: TrendingUp,
     title: 'Higher Yields',
-    desc: 'Targeted application ensures every plant receives exactly what it needs, boosting output by up to 30%.',
+    desc: 'Targeted application ensures every plant receives exactly what it needs, optimising results across every field.',
   },
   {
     icon: Leaf,
     title: 'Eco-Friendly',
-    desc: 'Reduce chemical usage by up to 90% with pinpoint accuracy, protecting soil and water resources.',
+    desc: 'Pinpoint accuracy protects soil and water resources, supporting a healthier and more sustainable farming environment.',
   },
   {
     icon: Zap,
-    title: '5× Faster',
-    desc: 'Cover hundreds of acres in hours, not days. Autonomous flights operate rain or shine.',
+    title: 'Rapid Coverage',
+    desc: 'Cover large areas with ease. Autonomous flights operate efficiently across varied conditions and terrain.',
   },
   {
     icon: ShieldCheck,
-    title: 'Operator Safety',
-    desc: 'Remove human exposure to chemicals and hazardous terrains with fully autonomous operations.',
+    title: 'Reliable Operations',
+    desc: 'Fully autonomous drone operations reduce manual effort and deliver consistent results every time.',
   },
 ];
 

@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 const solutions = [
   {
     title: "Drone Spraying Services",
-    desc: "Precision application for crops with zero soil compaction. Targeted spraying reduces chemical waste by up to 30%.",
+    desc: "Precision application for crops with zero soil compaction. Delivering consistent, accurate coverage across every acre.",
     icon: "💧",
     link: "/services/drone-spraying"
   },

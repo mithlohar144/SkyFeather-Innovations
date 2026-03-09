@@ -15,7 +15,6 @@ const SpreadingHero = () => (
         </p>
         <div className="flex gap-4 mt-10">
           <button className="bg-agri-green text-white px-8 py-3 rounded-lg font-bold shadow-lg">Book a Demo</button>
-          <button className="border border-gray-300 text-agri-dark px-8 py-3 rounded-lg font-bold">View Pricing</button>
         </div>
       </div>
       <motion.div 

@@ -61,16 +61,6 @@ const AboutHero = () => (
           <div className="absolute inset-0 bg-linear-to-t from-[#0f2b1a]/70 via-transparent to-transparent" />
         </div>
 
-        {/* Floating stat */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.5 }}
-          className="absolute bottom-6 left-6 bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl px-5 py-4"
-        >
-          <p className="text-agri-green font-extrabold text-2xl">500+</p>
-          <p className="text-white/50 text-xs uppercase tracking-wider mt-0.5">UK Farms Served</p>
-        </motion.div>
 
         {/* Floating tag top-right */}
         <motion.div
