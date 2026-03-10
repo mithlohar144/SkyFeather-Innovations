@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import SpreadingHero from '../components/spreading/SpreadingHero';
+import SEO from '../components/common/SEO';
 import spreadingImageOne from '../assest/images/crop.avif';
 import spreadingImageTwo from '../assest/images/fertiliser.avif';
 import spreadingImageThree from '../assest/images/pelleted.avif';
@@ -42,7 +43,12 @@ const Spreading = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full" id="main-content">
+      <SEO
+        title="Drone Spreading"
+        description="Aerial spreading of cover crops, seeds, granular fertiliser, and pelleted products by drone — no soil compaction, even in wet conditions. UK-wide service by SkyFeather."
+        path="/services/drone-spreading"
+      />
       <Navbar />
       <div className="pt-20">
         <SpreadingHero />

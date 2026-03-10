@@ -9,7 +9,7 @@ const PlatformSection = () => (
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.2 }}
         className="text-center mb-20"
       >
         <h2 className="text-4xl md:text-5xl font-bold text-agri-dark leading-tight">
@@ -27,14 +27,16 @@ const PlatformSection = () => (
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.4 }}
         >
           <div className="bg-blue-100/40 rounded-3xl p-4 md:p-6">
             <img
               src={spreying2}
               alt="Agriculture drone flying over green fields"
-              className="rounded-2xl w-full object-cover aspect-[4/3] shadow-lg"
+              className="rounded-2xl w-full object-cover aspect-4/3 shadow-lg"
+              width={600}
+              height={450}
               loading="lazy"
               decoding="async"
             />
@@ -45,8 +47,8 @@ const PlatformSection = () => (
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.15 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
           className="space-y-6"
         >
           <h3 className="text-3xl md:text-4xl font-bold text-agri-dark leading-snug">
@@ -64,9 +66,10 @@ const PlatformSection = () => (
             </a>
             <a
               href="/contact"
+              aria-label="Contact us"
               className="btn-interactive w-11 h-11 rounded-full border-2 border-agri-green flex items-center justify-center text-agri-green hover:bg-blue-600 hover:border-blue-600 hover:text-white hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25 active:scale-95 transition-all duration-300"
             >
-              <ArrowRight size={18} />
+              <ArrowRight size={18} aria-hidden="true" />
             </a>
           </div>
         </motion.div>

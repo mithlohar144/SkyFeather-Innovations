@@ -34,6 +34,8 @@ const SprayingHero = () => (
           src={sprayingHeroImage}
           alt="Drone spraying services in crop field" 
           className="rounded-3xl shadow-2xl hover:scale-[1.02] transition-transform duration-500"
+          width={600}
+          height={400}
           loading="lazy"
           decoding="async"
         />

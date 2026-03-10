@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
+import SEO from '../components/common/SEO';
 import mapping from '../assest/images/mapping.avif';
 import spraying from '../assest/images/Drone-Spraying.jpg';
 import spreading from '../assest/images/DroneSpreading.webp';
@@ -32,7 +33,20 @@ const Services = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full" id="main-content">
+      <SEO
+        title="Services"
+        description="Explore SkyFeather's drone services — multispectral crop mapping, precision spraying of biostimulants & fertilisers, and aerial spreading of seed & granular products across the UK."
+        path="/services"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          provider: { '@type': 'Organization', name: 'SkyFeather Innovations' },
+          areaServed: 'United Kingdom',
+          serviceType: 'Precision Agriculture Drone Services',
+          description: 'Drone spraying, spreading, and multispectral mapping for modern farms.',
+        }}
+      />
       <Navbar />
       <div className="pt-20">
         <section className="py-20 bg-white">
@@ -69,6 +83,8 @@ const Services = () => {
                       src={service.imageSrc}
                       alt={service.title}
                       className="w-full rounded-2xl h-52 object-cover group-hover:scale-105 transition-transform duration-500"
+                      width={400}
+                      height={208}
                       loading="lazy"
                       decoding="async"
                     />
@@ -76,7 +92,7 @@ const Services = () => {
                   <div className="p-6">
                     <h2 className="text-xl font-bold text-agri-dark mb-3">{service.title}</h2>
                     <p className="text-gray-700 leading-relaxed text-sm">{service.desc}</p>
-                    <Link to={service.link} className="btn-interactive inline-flex items-center justify-center mt-4 w-10 h-10 bg-agri-green text-white rounded-full hover:bg-indigo-600 hover:scale-110 hover:shadow-lg hover:shadow-indigo-500/25 active:scale-95 transition-all duration-300">
+                    <Link to={service.link} aria-label={`View ${service.title} details`} className="btn-interactive inline-flex items-center justify-center mt-4 w-10 h-10 bg-agri-green text-white rounded-full hover:bg-indigo-600 hover:scale-110 hover:shadow-lg hover:shadow-indigo-500/25 active:scale-95 transition-all duration-300">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
                     </Link>
                   </div>
@@ -94,7 +110,7 @@ const Services = () => {
             transition={{ duration: 0.6 }}
             className="w-full md:w-1/2 flex items-center justify-center overflow-hidden rounded-2xl"
           >
-            <img className='rounded-2xl w-full h-72 sm:h-96 md:h-full object-cover hover:scale-105 transition-transform duration-700' src={farmer} alt="Testimonial" />
+            <img className='rounded-2xl w-full h-72 sm:h-96 md:h-full object-cover hover:scale-105 transition-transform duration-700' src={farmer} alt="James, a farmer from York, in his field" width={600} height={400} loading="lazy" decoding="async" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 30 }}

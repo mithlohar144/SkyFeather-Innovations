@@ -2,10 +2,16 @@ import React from 'react';
 import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import ContactForm from '../components/contact/ContactForm';
+import SEO from '../components/common/SEO';
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
-
+import DroneSpraying1 from '../assest/images/Drone-Spraying1.jpg';
 const Contact = () => (
-  <div className="w-full">
+  <div className="w-full" id="main-content">
+    <SEO
+      title="Contact Us"
+      description="Get in touch with SkyFeather Innovations for precision agriculture drone services. Request a quote for mapping, spraying, or spreading across the UK."
+      path="/contact"
+    />
     <Navbar />
 
     {/* Hero split section */}
@@ -15,10 +21,12 @@ const Contact = () => (
       <div className="relative hidden lg:flex lg:w-1/2 flex-col justify-between p-14 overflow-hidden">
         {/* Background image */}
         <img
-          src="https://images.unsplash.com/photo-1560493676-04071c5f467b?q=70&w=900&auto=format&fit=crop&fm=webp"
+          src={DroneSpraying1}
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover"
+          width={900}
+          height={1200}
           loading="lazy"
           decoding="async"
         />
@@ -38,7 +46,7 @@ const Contact = () => (
         <div className="relative z-10 space-y-8">
           {/* Location */}
           <div>
-            <p className="text-white/35 text-xs uppercase tracking-widest font-semibold mb-2">Location</p>
+            <p className="text-white/50 text-xs uppercase tracking-widest font-semibold mb-2">Location</p>
             <div className="flex items-start gap-2">
               <MapPin size={14} className="text-agri-green mt-0.5 shrink-0" />
               <p className="text-white/70 text-sm leading-relaxed">
@@ -51,11 +59,11 @@ const Contact = () => (
           {/* Email + Phone */}
           <div className="grid grid-cols-2 gap-6">
             <div>
-              <p className="text-white/35 text-xs uppercase tracking-widest font-semibold mb-2">Email</p>
+              <p className="text-white/50 text-xs uppercase tracking-widest font-semibold mb-2">Email</p>
               <a href="mailto:email@example.com" className="text-white/70 hover:text-agri-green transition text-sm">email@example.com</a>
             </div>
             <div>
-              <p className="text-white/35 text-xs uppercase tracking-widest font-semibold mb-2">Contact</p>
+              <p className="text-white/50 text-xs uppercase tracking-widest font-semibold mb-2">Contact</p>
               <a href="tel:5555555555" className="text-white/70 hover:text-agri-green transition text-sm">(555) 555-5555</a>
             </div>
           </div>

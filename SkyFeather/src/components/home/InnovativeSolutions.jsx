@@ -29,7 +29,7 @@ const InnovativeSolutions = () => (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.2 }}
           className="max-w-lg"
         >
           <h2 className="text-4xl md:text-5xl font-extralight text-agri-dark leading-tight">
@@ -40,7 +40,7 @@ const InnovativeSolutions = () => (
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ delay: 0.1 }}
           className="text-gray-500 text-base font-semibold leading-relaxed max-w-xs lg:text-right"
         >
@@ -52,7 +52,7 @@ const InnovativeSolutions = () => (
       <motion.div
         initial={{ opacity: 0, x: -10 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.2 }}
         className="mb-6"
       >
         <a
@@ -61,7 +61,7 @@ const InnovativeSolutions = () => (
         >
           More Service
           <span className="w-7 h-7 rounded-full border border-white/30 flex items-center justify-center">
-            <ArrowRight size={13} />
+            <ArrowRight size={13} aria-hidden="true" />
           </span>
         </a>
       </motion.div>
@@ -70,14 +70,16 @@ const InnovativeSolutions = () => (
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.4 }}
         className="rounded-3xl overflow-hidden shadow-xl mb-14"
       >
         <img
           src={innovattionImage}
           alt="Drones flying over a lush green farmland at golden hour"
-          className="w-full h-[420px] object-cover object-center hover:scale-[1.02] transition-transform duration-700"
+          className="w-full h-[420px] object-cover object-center hover:scale-[1.02] transition-transform duration-300"
+          width={1200}
+          height={420}
           loading="lazy"
           decoding="async"
         />
@@ -90,17 +92,17 @@ const InnovativeSolutions = () => (
             key={idx}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: idx * 0.12 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ delay: idx * 0.08 }}
             className={`px-8 py-6 relative ${idx === 0 ? 'md:pl-0' : ''} ${idx === features.length - 1 ? 'md:pr-0' : ''}`}
           >
             {/* Green accent top border for highlighted item */}
             {item.highlight && (
               <div className="absolute top-0 left-8 right-8 h-0.5 bg-agri-green rounded-full" />
             )}
-            <h4 className={`text-base font-bold mb-3 ${item.highlight ? 'text-agri-green' : 'text-agri-dark'}`}>
+            <h3 className={`text-base font-bold mb-3 ${item.highlight ? 'text-agri-green' : 'text-agri-dark'}`}>
               {item.title}
-            </h4>
+            </h3>
             <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
           </motion.div>
         ))}

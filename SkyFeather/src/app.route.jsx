@@ -1,38 +1,45 @@
+import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import Mapping from "./pages/Mapping";
-import Spraying from "./pages/Spraying";
-import Spreading from "./pages/Spreading";
-import Contact from "./pages/Contact";
+
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Services = lazy(() => import("./pages/Services"));
+const Mapping = lazy(() => import("./pages/Mapping"));
+const Spraying = lazy(() => import("./pages/Spraying"));
+const Spreading = lazy(() => import("./pages/Spreading"));
+const Contact = lazy(() => import("./pages/Contact"));
+
+const Lazy = ({ children }) => (
+    <Suspense fallback={<div className="min-h-screen" />}>{children}</Suspense>
+);
+
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <Home />
+        element: <Lazy><Home /></Lazy>
     },
     {
         path: "/about",
-        element: <About />
+        element: <Lazy><About /></Lazy>
     },
     {
         path: "/services",
-        element: <Services />
+        element: <Lazy><Services /></Lazy>
     },
     {
         path: "/services/multispectral-mapping",
-        element: <Mapping />
+        element: <Lazy><Mapping /></Lazy>
     },
     {
         path: "/services/drone-spraying",
-        element: <Spraying />
+        element: <Lazy><Spraying /></Lazy>
     },
     {
         path: "/services/drone-spreading",
-        element: <Spreading />
+        element: <Lazy><Spreading /></Lazy>
     },
     {
         path: "/contact",
-        element: <Contact />
+        element: <Lazy><Contact /></Lazy>
     }
 ])

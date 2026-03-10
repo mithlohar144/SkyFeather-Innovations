@@ -37,7 +37,7 @@ const AboutHero = () => (
           >
             Work With Us
             <span className="w-8 h-8 bg-[#0f2b1a]/15 rounded-full flex items-center justify-center">
-              <ArrowUpRight size={16} />
+              <ArrowUpRight size={16} aria-hidden="true" />
             </span>
           </a>
         </div>
@@ -55,6 +55,8 @@ const AboutHero = () => (
             src={PrecisionAgriculture}
             alt="SkyFeather drone farming UK"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            width={600}
+            height={480}
             loading="lazy"
             decoding="async"
           />

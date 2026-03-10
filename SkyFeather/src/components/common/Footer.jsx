@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, ArrowUpRight } from 'lucide-react';
+import { Mail, Phone, ArrowUpRight } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -23,7 +23,7 @@ const Footer = () => (
     <div className="border-b border-white/8">
       <div className="container mx-auto px-6 py-14 flex flex-col md:flex-row items-center justify-between gap-8">
         <div>
-          <p className="text-xs text-white/40 uppercase tracking-widest font-semibold mb-2">Ready to get started?</p>
+          <p className="text-xs text-white/60 uppercase tracking-widest font-semibold mb-2">Ready to get started?</p>
           <h2 className="text-2xl md:text-3xl font-extrabold leading-tight">
             Transform your farm with{' '}
             <span className="text-agri-green">SkyFeather Innovations</span>
@@ -35,7 +35,7 @@ const Footer = () => (
         >
           Get In Touch
           <span className="w-8 h-8 bg-[#0f2b1a]/15 rounded-full flex items-center justify-center">
-            <ArrowUpRight size={15} />
+            <ArrowUpRight size={15} aria-hidden="true" />
           </span>
         </a>
       </div>
@@ -54,7 +54,7 @@ const Footer = () => (
           </div>
           <span className="text-lg font-extrabold tracking-tight">SkyFeather Innovations</span>
         </div>
-        <p className="text-white/40 text-sm leading-relaxed">
+        <p className="text-white/50 text-sm leading-relaxed">
           Empowering UK farmers with smarter, more efficient farm management through precision drone technology.
         </p>
         {/* Socials */}
@@ -63,7 +63,7 @@ const Footer = () => (
 
       {/* Pages */}
       <div>
-        <h4 className="text-xs font-bold uppercase tracking-widest text-white/40 mb-5">Pages</h4>
+        <h4 className="text-xs font-bold uppercase tracking-widest text-white/60 mb-5">Pages</h4>
         <ul className="space-y-3">
           {navLinks.map(({ label, href }) => (
             <li key={label}>
@@ -77,7 +77,7 @@ const Footer = () => (
 
       {/* Services */}
       <div>
-        <h4 className="text-xs font-bold uppercase tracking-widest text-white/40 mb-5">Services</h4>
+        <h4 className="text-xs font-bold uppercase tracking-widest text-white/60 mb-5">Services</h4>
         <ul className="space-y-3">
           {serviceLinks.map(({ label, href }) => (
             <li key={label}>
@@ -91,7 +91,7 @@ const Footer = () => (
 
       {/* Contact */}
       <div>
-        <h4 className="text-xs font-bold uppercase tracking-widest text-white/40 mb-5">Contact</h4>
+        <h4 className="text-xs font-bold uppercase tracking-widest text-white/60 mb-5">Contact</h4>
         <ul className="space-y-4">
           <li>
             <a href="mailto:email@example.com" className="flex items-center gap-3 group">
@@ -115,7 +115,7 @@ const Footer = () => (
 
     {/* Bottom bar */}
     <div className="border-t border-white/8">
-      <div className="container mx-auto px-6 py-6 flex flex-col sm:flex-row justify-center items-center gap-4 text-xs text-white/25">
+      <div className="container mx-auto px-6 py-6 flex flex-col sm:flex-row justify-center items-center gap-4 text-xs text-white/50">
         <p>&copy; 2026 SkyFeather Innovations. All rights reserved.</p>
         {/* <div className="flex gap-6">
           <a href="#" className="hover:text-white/60 transition">Privacy Policy</a>

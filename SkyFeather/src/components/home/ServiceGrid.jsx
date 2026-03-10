@@ -58,8 +58,8 @@ const ServiceGrid = () => {
               key={index}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.12, duration: 0.5 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ delay: index * 0.08, duration: 0.35 }}
               className="group relative bg-[#f7f8f6] rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col"
             >
               {/* Image */}
@@ -68,6 +68,8 @@ const ServiceGrid = () => {
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  width={400}
+                  height={224}
                   loading="lazy"
                   decoding="async"
                 />
@@ -98,7 +100,7 @@ const ServiceGrid = () => {
                 >
                   Explore service
                   <span className="w-7 h-7 rounded-full border border-gray-300 group-hover/link:border-agri-green group-hover/link:bg-agri-green flex items-center justify-center transition-all">
-                    <ArrowUpRight size={13} className="group-hover/link:text-white transition-colors" />
+                    <ArrowUpRight size={13} className="group-hover/link:text-white transition-colors" aria-hidden="true" />
                   </span>
                 </a>
               </div>
@@ -110,7 +112,7 @@ const ServiceGrid = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.2 }}
           className="text-center mt-14"
         >
           <a
@@ -119,7 +121,7 @@ const ServiceGrid = () => {
           >
             View All Services
             <span className="w-8 h-8 rounded-full bg-agri-green flex items-center justify-center">
-              <ArrowUpRight size={14} className="text-white" />
+              <ArrowUpRight size={14} className="text-white" aria-hidden="true" />
             </span>
           </a>
         </motion.div>

@@ -1,5 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { useState, useRef, useEffect } from 'react';
 import { ChevronDown, Menu, X, ArrowUpRight } from 'lucide-react';
 
 const serviceLinks = [
@@ -21,9 +20,18 @@ const Navbar = () => {
         setDropdownOpen(false);
       }
     };
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+      }
+    };
     document.addEventListener('mousedown', handleClickOutside);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       window.removeEventListener('scroll', handleScroll);
@@ -31,6 +39,10 @@ const Navbar = () => {
   }, []);
 
   return (
+    <>
+    <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-agri-green focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-bold">
+      Skip to main content
+    </a>
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
@@ -69,29 +81,23 @@ const Navbar = () => {
               Services
               <ChevronDown size={13} className={`transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
             </button>
-            <AnimatePresence>
-              {dropdownOpen && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95, y: 6 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.95, y: 6 }}
-                  transition={{ duration: 0.15 }}
-                  className="absolute top-full mt-2 left-1/2 -translate-x-1/2 w-56 bg-white rounded-2xl shadow-2xl border border-gray-100/80 py-2 z-50 overflow-hidden"
+            <div
+              className={`absolute top-full mt-2 left-1/2 -translate-x-1/2 w-56 bg-white rounded-2xl shadow-2xl border border-gray-100/80 py-2 z-50 overflow-hidden transition-all duration-150 origin-top ${
+                dropdownOpen ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto' : 'opacity-0 scale-95 translate-y-1.5 pointer-events-none'
+              }`}
+            >
+              {serviceLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="flex items-center gap-2 px-4 py-2.5 text-[13px] text-gray-600 hover:bg-agri-green/8 hover:text-agri-green transition-colors"
+                  onClick={() => setDropdownOpen(false)}
                 >
-                  {serviceLinks.map((link, i) => (
-                    <a
-                      key={link.href}
-                      href={link.href}
-                      className="flex items-center gap-2 px-4 py-2.5 text-[13px] text-gray-600 hover:bg-agri-green/8 hover:text-agri-green transition-colors"
-                      onClick={() => setDropdownOpen(false)}
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-agri-green/50 shrink-0" />
-                      {link.label}
-                    </a>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
+                  <span className="w-1.5 h-1.5 rounded-full bg-agri-green/50 shrink-0" />
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
 
           <a href="/contact" className="px-4 py-1.5 rounded-full text-gray-600 hover:bg-white hover:text-gray-900 hover:shadow-sm transition-all duration-150">
@@ -107,7 +113,7 @@ const Navbar = () => {
           >
             Get Started
             <span className="w-7 h-7 rounded-full bg-agri-green group-hover:bg-white/20 flex items-center justify-center shrink-0 transition-colors duration-200">
-              <ArrowUpRight size={13} className="text-white" />
+              <ArrowUpRight size={13} className="text-white" aria-hidden="true" />
             </span>
           </a>
         </div>
@@ -123,15 +129,11 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-xl"
-          >
+      <div
+        className={`md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-xl transition-all duration-200 origin-top ${
+          mobileOpen ? 'opacity-100 translate-y-0 max-h-[500px] pointer-events-auto' : 'opacity-0 -translate-y-2 max-h-0 pointer-events-none overflow-hidden'
+        }`}
+      >
             <div className="px-5 py-5 flex flex-col gap-1">
               {[
                 { label: 'Home', href: '/' },
@@ -173,10 +175,9 @@ const Navbar = () => {
                 </a>
               </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      </div>
     </nav>
+    </>
   );
 };
 

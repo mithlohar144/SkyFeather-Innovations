@@ -13,25 +13,44 @@ const ContactForm = () => {
       <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
         {/* Row 1 */}
         <div className="grid grid-cols-2 gap-4">
-          <input type="text" placeholder="First Name" className={inputClass} />
-          <input type="text" placeholder="Last Name" className={inputClass} />
+          <div>
+            <label htmlFor="firstName" className="sr-only">First Name</label>
+            <input id="firstName" type="text" placeholder="First Name" className={inputClass} />
+          </div>
+          <div>
+            <label htmlFor="lastName" className="sr-only">Last Name</label>
+            <input id="lastName" type="text" placeholder="Last Name" className={inputClass} />
+          </div>
         </div>
 
         {/* Row 2 */}
         <div className="grid grid-cols-2 gap-4">
-          <input type="text" placeholder="Country" className={inputClass} />
-          <input type="tel" placeholder="Phone Number" className={inputClass} />
+          <div>
+            <label htmlFor="country" className="sr-only">Country</label>
+            <input id="country" type="text" placeholder="Country" className={inputClass} />
+          </div>
+          <div>
+            <label htmlFor="phone" className="sr-only">Phone Number</label>
+            <input id="phone" type="tel" placeholder="Phone Number" className={inputClass} />
+          </div>
         </div>
 
         {/* Email */}
-        <input type="email" placeholder="Email Address" className={inputClass} />
+        <div>
+          <label htmlFor="email" className="sr-only">Email Address</label>
+          <input id="email" type="email" placeholder="Email Address" className={inputClass} />
+        </div>
 
         {/* Message */}
-        <textarea
-          rows="4"
-          placeholder="Message"
-          className={inputClass}
-        />
+        <div>
+          <label htmlFor="message" className="sr-only">Message</label>
+          <textarea
+            id="message"
+            rows="4"
+            placeholder="Message"
+            className={inputClass}
+          />
+        </div>
 
        
 

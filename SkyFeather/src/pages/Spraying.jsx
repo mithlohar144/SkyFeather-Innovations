@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import SprayingHero from '../components/spraying/SprayingHero';
+import SEO from '../components/common/SEO';
 import sprayingImageOne from '../assest/images/Drone-Spraying.jpg';
 import sprayingImageTwo from '../assest/images/spreying2.avif';
 import sprayingImageThree from '../assest/images/spreying3.avif';
@@ -44,7 +45,12 @@ const Spraying = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full" id="main-content">
+      <SEO
+        title="Drone Spraying"
+        description="Precision drone spraying services for biostimulants, liquid fertilisers, natural pest control, and specialist treatments — no ground damage, applied at the right time."
+        path="/services/drone-spraying"
+      />
       <Navbar />
       <div className="pt-20">
         <SprayingHero />

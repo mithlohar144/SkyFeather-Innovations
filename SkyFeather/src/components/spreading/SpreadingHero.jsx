@@ -31,6 +31,8 @@ const SpreadingHero = () => (
           src={spreadingHeroImage}
           alt="Drone spreading services over agricultural fields" 
           className="rounded-3xl shadow-2xl hover:scale-[1.02] transition-transform duration-500"
+          width={600}
+          height={400}
           loading="lazy"
           decoding="async"
         />

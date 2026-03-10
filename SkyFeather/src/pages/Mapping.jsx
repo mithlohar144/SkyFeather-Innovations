@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import MappingHero from '../components/mapping/MappingHero';
+import SEO from '../components/common/SEO';
 import mapping from '../assest/images/mapping.avif';
 import vegi from '../assest/images/map.png';
 import mapping2 from '../assest/images/WeedTreatment.jpg';
@@ -38,7 +39,12 @@ const Mapping = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full" id="main-content">
+      <SEO
+        title="Multispectral Mapping"
+        description="Drone multispectral mapping for vegetation health indices, weed treatment maps, and digital surface models. Get actionable crop intelligence from the air with SkyFeather."
+        path="/services/multispectral-mapping"
+      />
       <Navbar />
       <div className="pt-20">
         <MappingHero />

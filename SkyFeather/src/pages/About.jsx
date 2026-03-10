@@ -3,6 +3,7 @@ import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import AboutHero from '../components/about/AboutHero';
 import MissionVision from '../components/about/MissionVision';
+import SEO from '../components/common/SEO';
 import { motion } from 'framer-motion';
 import { Leaf, Cpu, ShieldCheck, Users } from 'lucide-react';
 
@@ -16,7 +17,12 @@ const values = [
 
 const About = () => {
   return (
-    <div className="w-full">
+    <div className="w-full" id="main-content">
+      <SEO
+        title="About Us"
+        description="Learn about SkyFeather Innovations — our mission to transform UK agriculture with precision drone technology, our values, and the team behind smarter farming."
+        path="/about"
+      />
       <Navbar />
       <div className="pt-20">
         <AboutHero />
@@ -75,9 +81,9 @@ const About = () => {
 
                   {/* Text */}
                   <div>
-                    <h4 className={`text-lg font-extrabold mb-2 ${idx === 0 ? 'text-white' : 'text-agri-dark'}`}>
+                    <h3 className={`text-lg font-extrabold mb-2 ${idx === 0 ? 'text-white' : 'text-agri-dark'}`}>
                       {item.title}
-                    </h4>
+                    </h3>
                     <p className={`text-sm leading-relaxed ${idx === 0 ? 'text-white/50' : 'text-gray-500'}`}>
                       {item.desc}
                     </p>

@@ -16,7 +16,7 @@ const ComparisonSlider = () => {
         <div className="relative w-full max-w-5xl mx-auto aspect-video rounded-3xl overflow-hidden shadow-2xl group">
           {/* Normal View (Bottom Layer) */}
           <div className="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=70&w=1000&auto=format&fit=crop&fm=webp" alt="Normal View" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=70&w=1000&auto=format&fit=crop&fm=webp" alt="Normal RGB view of agricultural field" className="w-full h-full object-cover" width={1000} height={600} loading="lazy" decoding="async" />
             <div className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded text-xs">NORMAL VIEW (RGB)</div>
           </div>
 
@@ -25,7 +25,7 @@ const ComparisonSlider = () => {
             className="absolute inset-0 pointer-events-none"
             style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
           >
-            <img src="https://images.unsplash.com/photo-1599940731034-e4c17bd315e1?q=70&w=1000&auto=format&fit=crop&fm=webp" alt="NDVI View" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+            <img src="https://images.unsplash.com/photo-1599940731034-e4c17bd315e1?q=70&w=1000&auto=format&fit=crop&fm=webp" alt="NDVI heatmap view of agricultural field" className="w-full h-full object-cover" width={1000} height={600} loading="lazy" decoding="async" />
             <div className="absolute top-4 right-4 bg-agri-green/80 text-white px-3 py-1 rounded text-xs">NDVI HEATMAP</div>
           </div>
 
@@ -34,6 +34,7 @@ const ComparisonSlider = () => {
             type="range" 
             min="0" max="100" value={sliderPos} 
             onChange={handleSliderChange}
+            aria-label="Comparison slider between normal and NDVI view"
             className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30"
           />
           
