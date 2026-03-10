@@ -84,16 +84,7 @@ const MissionVision = () => (
               </p>
             </div>
 
-            {/* Bottom arrow */}
-            <div className="mt-8 flex items-center justify-end">
-              <span className={`w-9 h-9 rounded-full border flex items-center justify-center transition-all duration-300 group-hover:scale-110 ${
-                card.highlight
-                  ? 'border-white/20 text-white/40 group-hover:bg-agri-green group-hover:border-agri-green group-hover:text-[#0f2b1a]'
-                  : 'border-agri-dark/15 text-agri-dark/30 group-hover:bg-agri-green group-hover:border-agri-green group-hover:text-[#0f2b1a]'
-              }`}>
-                <ArrowUpRight size={15} />
-              </span>
-            </div>
+           
           </motion.div>
         ))}
       </div>

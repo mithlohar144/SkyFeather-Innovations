@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import vegi from '../../assest/images/vegi.png';
+import vegi from '../../assest/images/map.png';
 
 const MappingHero = () => (
   <section className="relative py-16 md:py-24 bg-gradient-to-br from-white via-green-50/30 to-white overflow-hidden">
