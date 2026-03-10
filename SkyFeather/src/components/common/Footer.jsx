@@ -26,7 +26,7 @@ const Footer = () => (
           <p className="text-xs text-white/40 uppercase tracking-widest font-semibold mb-2">Ready to get started?</p>
           <h2 className="text-2xl md:text-3xl font-extrabold leading-tight">
             Transform your farm with{' '}
-            <span className="text-agri-green">SkyFeather</span>
+            <span className="text-agri-green">SkyFeather Innovation</span>
           </h2>
         </div>
         <a
@@ -52,7 +52,7 @@ const Footer = () => (
               <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
             </svg>
           </div>
-          <span className="text-lg font-extrabold tracking-tight">SkyFeather</span>
+          <span className="text-lg font-extrabold tracking-tight">SkyFeather Innovation</span>
         </div>
         <p className="text-white/40 text-sm leading-relaxed">
           Empowering UK farmers with smarter, more efficient farm management through precision drone technology.

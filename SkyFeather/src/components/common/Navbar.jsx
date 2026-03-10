@@ -48,7 +48,7 @@ const Navbar = () => {
               <circle cx="12" cy="12" r="4" strokeWidth={2} />
             </svg>
           </div>
-          <span className="text-[15px] font-bold text-agri-dark tracking-tight">SkyFeather</span>
+          <span className="text-[15px] font-bold text-agri-dark tracking-tight">SkyFeather Innovation</span>
         </a>
 
         {/* Desktop center nav — pill container */}
