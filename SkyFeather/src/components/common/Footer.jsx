@@ -26,7 +26,7 @@ const Footer = () => (
           <p className="text-xs text-white/40 uppercase tracking-widest font-semibold mb-2">Ready to get started?</p>
           <h2 className="text-2xl md:text-3xl font-extrabold leading-tight">
             Transform your farm with{' '}
-            <span className="text-agri-green">SkyFeather Innovation</span>
+            <span className="text-agri-green">SkyFeather Innovations</span>
           </h2>
         </div>
         <a
