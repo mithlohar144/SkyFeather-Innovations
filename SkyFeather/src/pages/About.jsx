@@ -98,10 +98,10 @@ const About = () => {
               Get in touch with our precision agriculture experts and discover how drone technology can work for you.
             </p>
             <div className="flex justify-center gap-4 mt-10">
-              <a href="/contact" className="bg-agri-green text-white px-8 py-3.5 rounded-xl font-bold shadow-lg shadow-green-900/30 hover:bg-green-700 transition">
+              <a href="/contact" className="btn-interactive bg-agri-green text-white px-8 py-3.5 rounded-xl font-bold shadow-lg shadow-green-900/30 hover:bg-violet-600 hover:shadow-violet-500/30 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300">
                 Contact Us
               </a>
-              <a href="/services" className="border border-white/20 text-white px-8 py-3.5 rounded-xl font-bold hover:bg-white/10 transition">
+              <a href="/services" className="btn-interactive border border-white/20 text-white px-8 py-3.5 rounded-xl font-bold hover:bg-white/10 transition">
                 View Services
               </a>
             </div>

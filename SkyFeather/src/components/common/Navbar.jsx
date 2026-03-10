@@ -103,7 +103,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-3">
           <a
             href="/contact"
-            className="group flex items-center gap-2 bg-agri-dark text-white text-[13px] font-semibold pl-4 pr-1.5 py-1.5 rounded-full hover:bg-agri-green transition-all duration-200 shadow-md hover:shadow-agri-green/30"
+            className="btn-interactive group flex items-center gap-2 bg-agri-dark text-white text-[13px] font-semibold pl-4 pr-1.5 py-1.5 rounded-full hover:bg-indigo-600 hover:scale-[1.03] hover:shadow-lg hover:shadow-indigo-500/25 active:scale-[0.98] transition-all duration-200 shadow-md"
           >
             Get Started
             <span className="w-7 h-7 rounded-full bg-agri-green group-hover:bg-white/20 flex items-center justify-center shrink-0 transition-colors duration-200">
@@ -167,7 +167,7 @@ const Navbar = () => {
                 <a
                   href="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="flex items-center justify-center gap-2 bg-agri-dark text-white py-3 rounded-2xl text-sm font-semibold w-full hover:bg-agri-green transition-colors"
+                  className="flex items-center justify-center gap-2 bg-agri-dark text-white py-3 rounded-2xl text-sm font-semibold w-full hover:bg-indigo-600 transition-colors"
                 >
                   Get Started <ArrowUpRight size={14} />
                 </a>

@@ -115,7 +115,7 @@ const ServiceGrid = () => {
         >
           <a
             href="/services"
-            className="inline-flex items-center gap-2.5 bg-agri-dark text-white font-semibold pl-6 pr-2 py-2 rounded-full hover:bg-agri-green transition-colors text-sm"
+            className="btn-interactive inline-flex items-center gap-2.5 bg-agri-dark text-white font-semibold pl-6 pr-2 py-2 rounded-full hover:bg-amber-500 hover:text-gray-900 hover:scale-[1.03] hover:shadow-lg hover:shadow-amber-500/25 active:scale-[0.98] transition-all duration-300 text-sm"
           >
             View All Services
             <span className="w-8 h-8 rounded-full bg-agri-green flex items-center justify-center">

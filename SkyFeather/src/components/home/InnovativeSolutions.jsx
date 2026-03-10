@@ -57,7 +57,7 @@ const InnovativeSolutions = () => (
       >
         <a
           href="/services"
-          className="inline-flex items-center gap-3 bg-agri-dark text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-agri-green transition-all"
+          className="btn-interactive inline-flex items-center gap-3 bg-agri-dark text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-violet-600 hover:shadow-lg hover:shadow-violet-500/25 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300"
         >
           More Service
           <span className="w-7 h-7 rounded-full border border-white/30 flex items-center justify-center">
@@ -77,7 +77,7 @@ const InnovativeSolutions = () => (
         <img
           src={innovattionImage}
           alt="Drones flying over a lush green farmland at golden hour"
-          className="w-full h-[420px] object-cover object-center"
+          className="w-full h-[420px] object-cover object-center hover:scale-[1.02] transition-transform duration-700"
           loading="lazy"
           decoding="async"
         />

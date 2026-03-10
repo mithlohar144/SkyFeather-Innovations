@@ -6,7 +6,12 @@ const PlatformSection = () => (
   <section className="py-28 bg-gray-50">
     <div className="container mx-auto px-6">
       {/* Heading */}
-      <div className="text-center mb-20">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-center mb-20"
+      >
         <h2 className="text-4xl md:text-5xl font-bold text-agri-dark leading-tight">
           One Platform to Make{' '}
           <span className="bg-agri-green text-white px-4 py-1 rounded-full italic inline-block">
@@ -14,7 +19,7 @@ const PlatformSection = () => (
           </span>{' '}
           Resilient
         </h2>
-      </div>
+      </motion.div>
 
       {/* Content: Image + Text */}
       <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -53,13 +58,13 @@ const PlatformSection = () => (
           <div className="flex items-center gap-4 pt-2">
             <a
               href="/services"
-              className="bg-agri-dark text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-agri-green transition-all inline-flex items-center gap-2"
+              className="btn-interactive bg-agri-dark text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/25 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 inline-flex items-center gap-2"
             >
               Explore Platform
             </a>
             <a
               href="/contact"
-              className="w-11 h-11 rounded-full border-2 border-agri-green flex items-center justify-center text-agri-green hover:bg-agri-green hover:text-white transition-all"
+              className="btn-interactive w-11 h-11 rounded-full border-2 border-agri-green flex items-center justify-center text-agri-green hover:bg-blue-600 hover:border-blue-600 hover:text-white hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25 active:scale-95 transition-all duration-300"
             >
               <ArrowRight size={18} />
             </a>

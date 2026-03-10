@@ -31,7 +31,7 @@ const Footer = () => (
         </div>
         <a
           href="/contact"
-          className="shrink-0 inline-flex items-center gap-3 bg-agri-green text-[#0f2b1a] font-bold px-7 py-3.5 rounded-full hover:brightness-110 transition"
+          className="btn-interactive shrink-0 inline-flex items-center gap-3 bg-agri-green text-[#0f2b1a] font-bold px-7 py-3.5 rounded-full hover:bg-white hover:text-agri-dark hover:scale-[1.03] hover:shadow-lg hover:shadow-white/20 active:scale-[0.98] transition-all duration-300"
         >
           Get In Touch
           <span className="w-8 h-8 bg-[#0f2b1a]/15 rounded-full flex items-center justify-center">

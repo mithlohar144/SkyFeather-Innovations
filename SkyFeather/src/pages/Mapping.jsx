@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import MappingHero from '../components/mapping/MappingHero';
@@ -48,12 +49,19 @@ const Mapping = () => {
               const reverseDesktop = index % 2 === 1;
 
               return (
-                <article key={section.title} className="grid grid-cols-1 lg:grid-cols-2 min-h-105 rounded-2xl overflow-hidden">
-                  <figure className={`relative ${reverseDesktop ? 'lg:order-2' : ''}`}>
+                <motion.article
+                  key={section.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  className="group grid grid-cols-1 lg:grid-cols-2 min-h-105 rounded-2xl overflow-hidden"
+                >
+                  <figure className={`relative overflow-hidden ${reverseDesktop ? 'lg:order-2' : ''}`}>
                     <img
                       src={section.imageSrc}
                       alt={section.imageAlt}
-                      className="w-full h-70 rounded-2xl lg:h-full object-cover"
+                      className="w-full h-70 rounded-2xl lg:h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       loading="lazy"
                       decoding="async"
                     />
@@ -80,7 +88,7 @@ const Mapping = () => {
                       )}
                     </div>
                   </div>
-                </article>
+                </motion.article>
               );
             })}
           </div>

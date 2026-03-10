@@ -5,3 +5,28 @@
   --color-agri-dark: #0f172a;
   --color-agri-light: #f0fdf4;
 }
+
+/* Interactive button effects — desktop only */
+@media (hover: hover) and (pointer: fine) {
+  .btn-interactive {
+    position: relative;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                filter 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-interactive:hover {
+    filter: brightness(1.12);
+    box-shadow:
+      0 0 20px rgba(22, 163, 74, 0.25),
+      0 4px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+  }
+
+  .btn-interactive:active {
+    filter: brightness(0.95);
+    transform: scale(0.96) translateY(0);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+    transition-duration: 0.1s;
+  }
+}

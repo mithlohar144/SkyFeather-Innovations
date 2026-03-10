@@ -1,90 +1,87 @@
 import { motion } from 'framer-motion';
-import { Target, Eye, Rocket, ArrowUpRight } from 'lucide-react';
+import { Target, Eye, Rocket } from 'lucide-react';
 
 const cards = [
   {
     icon: Target,
-    tag: '01',
     title: 'Our Mission',
     desc: 'To provide accessible and efficient drone technology that optimizes crop yields while minimizing environmental impact. We aim to make precision agriculture the standard for every UK farmer.',
-    highlight: true,
+    accent: 'from-green-500 to-emerald-600',
+    iconBg: 'bg-green-500',
+    hoverBg: 'hover:bg-green-50',
+    hoverShadow: 'hover:shadow-green-200/50',
+    hoverBorder: 'hover:border-green-200',
   },
   {
     icon: Eye,
-    tag: '02',
     title: 'Our Vision',
     desc: 'To be the leading force in precision agriculture — creating a future where technology and nature thrive together, ensuring food security through innovative, data-driven solutions.',
-    highlight: false,
+    accent: 'from-blue-500 to-indigo-600',
+    iconBg: 'bg-blue-500',
+    hoverBg: 'hover:bg-blue-50',
+    hoverShadow: 'hover:shadow-blue-200/50',
+    hoverBorder: 'hover:border-blue-200',
   },
   {
     icon: Rocket,
-    tag: '03',
     title: 'Our Approach',
     desc: 'We combine cutting-edge drone hardware with intelligent software. From field assessment to actionable insights, every step is designed for accuracy, speed, and sustainability.',
-    highlight: false,
+    accent: 'from-amber-500 to-orange-600',
+    iconBg: 'bg-amber-500',
+    hoverBg: 'hover:bg-amber-50',
+    hoverShadow: 'hover:shadow-amber-200/50',
+    hoverBorder: 'hover:border-amber-200',
   },
 ];
 
 const MissionVision = () => (
-  <section className="py-28 bg-[#f7f8f6]">
+  <section className="py-20 md:py-28 bg-white">
     <div className="container mx-auto px-6">
 
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
-        <div>
-          <span className="inline-flex items-center gap-2 text-agri-green font-bold uppercase tracking-widest text-xs mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-agri-green" />
-            What Drives Us
-          </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-agri-dark leading-tight">
-            Mission, Vision<br className="hidden md:block" /> &amp; Approach
-          </h2>
-        </div>
-        <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-center max-w-2xl mx-auto mb-16"
+      >
+        <span className="inline-block bg-green-50 text-agri-green px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+          What Drives Us
+        </span>
+        <h2 className="text-3xl md:text-4xl font-bold text-agri-dark leading-tight">
+          Mission, Vision & Approach
+        </h2>
+        <p className="text-gray-500 mt-4 leading-relaxed">
           Three pillars that guide everything we build, every field we serve, and every farmer we work with.
         </p>
-      </div>
+      </motion.div>
 
       {/* Cards */}
-      <div className="grid md:grid-cols-3 gap-5">
+      <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
         {cards.map((card, idx) => (
           <motion.div
             key={idx}
-            initial={{ opacity: 0, y: 28 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: idx * 0.12, duration: 0.5 }}
-            className={`group relative flex flex-col justify-between p-8 rounded-3xl overflow-hidden transition-all duration-300 ${
-              card.highlight
-                ? 'bg-[#0f2b1a] text-white'
-                : 'bg-white hover:shadow-lg'
-            }`}
+            transition={{ delay: idx * 0.1, duration: 0.45 }}
+            className={`group relative bg-[#f9fafb] rounded-2xl p-8 ${card.hoverBg} hover:shadow-xl ${card.hoverShadow} hover:-translate-y-1.5 transition-all duration-300 border border-gray-100 ${card.hoverBorder}`}
           >
-            {/* Number tag */}
-            <span className={`absolute top-7 right-8 text-5xl font-extrabold leading-none select-none ${
-              card.highlight ? 'text-white/8' : 'text-agri-dark/6'
-            }`}>
-              {card.tag}
-            </span>
+            {/* Top accent bar */}
+            <div className={`absolute top-0 left-8 right-8 h-1 rounded-b-full bg-gradient-to-r ${card.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
 
             {/* Icon */}
-            <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-8 ${
-              card.highlight ? 'bg-agri-green/20' : 'bg-agri-green/10 group-hover:bg-agri-green/20 transition'
-            }`}>
-              <card.icon className="w-6 h-6 text-agri-green" />
+            <div className={`w-14 h-14 rounded-2xl ${card.iconBg} flex items-center justify-center mb-6 shadow-lg shadow-green-500/15 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+              <card.icon className="w-7 h-7 text-white" strokeWidth={2} />
             </div>
 
             {/* Text */}
-            <div className="flex-1">
-              <h3 className={`text-xl font-extrabold mb-3 ${card.highlight ? 'text-white' : 'text-agri-dark'}`}>
-                {card.title}
-              </h3>
-              <p className={`text-sm leading-relaxed ${card.highlight ? 'text-white/55' : 'text-gray-500'}`}>
-                {card.desc}
-              </p>
-            </div>
-
-           
+            <h3 className="text-xl font-bold text-agri-dark mb-3">
+              {card.title}
+            </h3>
+            <p className="text-gray-500 text-sm leading-relaxed">
+              {card.desc}
+            </p>
           </motion.div>
         ))}
       </div>

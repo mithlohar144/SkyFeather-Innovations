@@ -33,7 +33,7 @@ const AboutHero = () => (
         <div className="mt-10">
           <a
             href="/contact"
-            className="inline-flex items-center gap-3 bg-agri-green text-[#0f2b1a] font-bold px-7 py-3.5 rounded-full hover:brightness-110 transition"
+            className="btn-interactive inline-flex items-center gap-3 bg-agri-green text-[#0f2b1a] font-bold px-7 py-3.5 rounded-full hover:bg-amber-400 hover:text-gray-900 hover:scale-[1.03] hover:shadow-lg hover:shadow-amber-400/30 active:scale-[0.98] transition-all duration-300"
           >
             Work With Us
             <span className="w-8 h-8 bg-[#0f2b1a]/15 rounded-full flex items-center justify-center">
@@ -50,11 +50,11 @@ const AboutHero = () => (
         transition={{ duration: 0.8, delay: 0.2 }}
         className="relative"
       >
-        <div className="relative rounded-3xl overflow-hidden h-105 lg:h-120">
+        <div className="relative rounded-3xl overflow-hidden h-105 lg:h-120 group">
           <img
             src={PrecisionAgriculture}
             alt="SkyFeather drone farming UK"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             loading="lazy"
             decoding="async"
           />

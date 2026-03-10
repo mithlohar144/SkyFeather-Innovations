@@ -38,7 +38,7 @@ const ContactForm = () => {
         {/* Submit */}
         <button
           type="submit"
-          className="w-full bg-[#0f2b1a] text-white font-bold py-3.5 rounded-2xl hover:brightness-125 transition text-sm tracking-wide"
+          className="btn-interactive w-full bg-[#0f2b1a] text-white font-bold py-3.5 rounded-2xl hover:bg-violet-600 hover:shadow-lg hover:shadow-violet-500/25 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 text-sm tracking-wide"
         >
           Submit
         </button>

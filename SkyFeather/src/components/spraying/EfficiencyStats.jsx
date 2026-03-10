@@ -43,10 +43,10 @@ const EfficiencyStats = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.12, duration: 0.5 }}
-            className={`relative flex flex-col justify-between gap-8 p-8 rounded-3xl overflow-hidden group transition-all duration-300 ${
+            className={`relative flex flex-col justify-between gap-8 p-8 rounded-3xl overflow-hidden group transition-all duration-300 hover:-translate-y-1 ${
               item.accent
-                ? 'bg-[#0f2b1a] text-white'
-                : 'bg-[#f7f8f6] hover:shadow-lg'
+                ? 'bg-[#0f2b1a] text-white hover:shadow-xl'
+                : 'bg-[#f7f8f6] hover:shadow-xl hover:shadow-gray-200/50'
             }`}
           >
             {/* Ghost icon watermark */}

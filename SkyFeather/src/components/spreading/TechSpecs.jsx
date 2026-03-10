@@ -18,7 +18,13 @@ const TechSpecs = () => (
         ))}
       </div>
       
-      <div className="bg-agri-dark text-white p-10 rounded-3xl shadow-2xl relative overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, x: 24 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.15 }}
+        className="bg-agri-dark text-white p-10 rounded-3xl shadow-2xl relative overflow-hidden hover:shadow-3xl transition-shadow duration-300"
+      >
         <h3 className="text-2xl font-bold mb-8">Technical Specifications</h3>
         <div className="space-y-6">
           {[
@@ -36,7 +42,7 @@ const TechSpecs = () => (
         </div>
         {/* Subtle Drone Icon Background */}
         <div className="absolute -bottom-10 -right-10 opacity-10 text-9xl italic font-black">DRONE</div>
-      </div>
+      </motion.div>
     </div>
   </section>
 );
