@@ -3,15 +3,16 @@ import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import MappingHero from '../components/mapping/MappingHero';
 import mapping from '../assest/images/mapping.avif';
-import mapping2 from '../assest/images/mapping2.avif';
-import mapping3 from '../assest/images/mapping3.avif';
+import vegi from '../assest/images/vegi.png';
+import mapping2 from '../assest/images/WeedTreatment.jpg';
+import mapping3 from '../assest/images/DigitalSurfaceMaps.webp';
 const Mapping = () => {
   const mappingSections = [
     {
       title: 'Vegetation Index Maps',
       imageLabel: 'Plant Health_edited_edited.jpg',
       imageAlt: 'Vegetation index map of crop health',
-      imageSrc: mapping,
+      imageSrc: vegi,
       description:
         'Using multispectral mapping, our drones can create detailed vegetation indices that highlight crop and plant health across your fields. This shows which areas are growing well, and which may be under stress or could benefit from extra nutrients.'
     },
