@@ -3,7 +3,7 @@ import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import MappingHero from '../components/mapping/MappingHero';
 import mapping from '../assest/images/mapping.avif';
-import vegi from '../assest/images/vegi.png';
+import vegi from '../assest/images/map.png';
 import mapping2 from '../assest/images/WeedTreatment.jpg';
 import mapping3 from '../assest/images/DigitalSurfaceMaps.webp';
 const Mapping = () => {
@@ -49,7 +49,7 @@ const Mapping = () => {
 
               return (
                 <article key={section.title} className="grid grid-cols-1 lg:grid-cols-2 min-h-105 rounded-2xl overflow-hidden">
-                  <figure className={ reverseDesktop ? 'lg:order-2' : ''}>
+                  <figure className={`relative ${reverseDesktop ? 'lg:order-2' : ''}`}>
                     <img
                       src={section.imageSrc}
                       alt={section.imageAlt}
@@ -57,6 +57,18 @@ const Mapping = () => {
                       loading="lazy"
                       decoding="async"
                     />
+                    {index === 0 && (
+                      <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md px-5 py-3.5 rounded-xl shadow-xl z-10 border border-gray-100">
+                        <div className="flex items-center gap-2.5 mb-1.5">
+                          <div className="w-3 h-3 bg-red-500 rounded-full ring-2 ring-red-200" />
+                          <span className="text-xs font-semibold text-gray-700">Low Health</span>
+                        </div>
+                        <div className="flex items-center gap-2.5">
+                          <div className="w-3 h-3 bg-green-500 rounded-full ring-2 ring-green-200" />
+                          <span className="text-xs font-semibold text-gray-700">High Health</span>
+                        </div>
+                      </div>
+                    )}
                   </figure>
 
                   <div className={`flex items-center justify-center px-8 md:px-14 py-12 lg:py-16 ${reverseDesktop ? 'lg:order-1' : ''}`}>
