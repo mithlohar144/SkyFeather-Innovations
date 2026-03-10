@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
-import PrecisionAgriculture from '../../assest/images/PrecisionAgriculture.png'
+import PrecisionAgriculture from '../../assest/images/precision.jpg'
 const AboutHero = () => (
   <section className="relative overflow-hidden bg-[#0f2b1a] text-white">
     {/* Background glow */}
