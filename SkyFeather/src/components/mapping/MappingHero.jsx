@@ -6,7 +6,7 @@ import mappingBg from '../../assest/images/mapping3.avif';
 const MappingHero = () => (
   <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-agri-dark">
     {/* Background image with overlay */}
-    <div className="absolute inset-0">
+    {/* <div className="absolute inset-0">
       <img
         src={mappingBg}
         alt=""
@@ -14,7 +14,7 @@ const MappingHero = () => (
       />
       <div className="absolute inset-0 bg-gradient-to-t from-agri-dark via-agri-dark/80 to-agri-dark/50" />
       <div className="absolute inset-0 bg-gradient-to-r from-agri-dark/70 to-transparent" />
-    </div>
+    </div> */}
 
     {/* Green glow accents */}
     <div className="absolute inset-0 pointer-events-none">
