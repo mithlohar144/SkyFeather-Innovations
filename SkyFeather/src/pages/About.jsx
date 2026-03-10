@@ -92,7 +92,7 @@ const About = () => {
         <section className="py-20 bg-agri-dark text-white text-center">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold max-w-2xl mx-auto leading-tight">
-              Ready to transform your farm with <span className="text-agri-green">SkyFeather</span>?
+              Ready to transform your farm with <span className="text-agri-green">SkyFeather Innovation</span>?
             </h2>
             <p className="mt-4 text-gray-400 max-w-xl mx-auto">
               Get in touch with our precision agriculture experts and discover how drone technology can work for you.
