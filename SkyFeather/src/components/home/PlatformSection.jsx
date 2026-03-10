@@ -63,14 +63,15 @@ const PlatformSection = () => (
               className="btn-interactive bg-agri-dark text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/25 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 inline-flex items-center gap-2"
             >
               Explore Platform
-            </a>
-            <a
+              <a
               href="/contact"
               aria-label="Contact us"
-              className="btn-interactive w-11 h-11 rounded-full border-2 border-agri-green flex items-center justify-center text-agri-green hover:bg-blue-600 hover:border-blue-600 hover:text-white hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25 active:scale-95 transition-all duration-300"
+              className="btn-interactive w-8 h-8 rounded-full border-2  flex items-center justify-center   hover:text-white hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25 active:scale-95 transition-all duration-300"
             >
               <ArrowRight size={18} aria-hidden="true" />
             </a>
+            </a>
+            
           </div>
         </motion.div>
       </div>
