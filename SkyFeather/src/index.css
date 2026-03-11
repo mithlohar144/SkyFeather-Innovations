@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
 @theme {
   --color-agri-green: #16a34a;
   --color-agri-dark: #0f172a;
