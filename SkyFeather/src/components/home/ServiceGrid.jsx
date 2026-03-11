@@ -22,7 +22,7 @@ const services = [
   },
   {
     title: "Multispectral Mapping",
-    desc: "Advanced crop health analysis using NDVI sensors , stress, and nutrient deficiencies.",
+    desc: "Advanced crop health analysis using NDVI sensors to detect plant stress and nutrient deficiencies.",
     icon: Target,
     link: "/services/multispectral-mapping",
     image: MultispectralMapping,

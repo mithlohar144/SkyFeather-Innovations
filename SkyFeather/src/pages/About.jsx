@@ -10,7 +10,7 @@ import { Leaf, Cpu, ShieldCheck, Users } from 'lucide-react';
 const values = [
   { icon: Leaf, title: 'Sustainability First', desc: 'Every solution we build is designed to reduce chemical usage and protect the ecosystem.' },
   { icon: Cpu, title: 'Innovation Driven', desc: 'We combine AI, GPS, and drone engineering to push the boundaries of modern agriculture.' },
-  { icon: ShieldCheck, title: 'Trust & Safety', desc: 'certified operations with rigorous safety protocols on every single flight.' },
+  { icon: ShieldCheck, title: 'Trust & Safety', desc: 'Certified operations with rigorous safety protocols on every single flight.' },
   { icon: Users, title: 'Farmer Focused', desc: 'We listen to farmers and build tools that solve real problems in the field.' },
 ];
 

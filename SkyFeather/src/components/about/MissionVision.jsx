@@ -5,7 +5,7 @@ const cards = [
   {
     icon: Target,
     title: 'Our Mission',
-    desc: 'To provide accessible and efficient drone technology that optimizes crop yields while minimizing environmental impact. We aim to make precision agriculture the standard for every UK farmer.',
+    desc: 'To provide accessible and efficient drone technology that optimises crop yields while minimising environmental impact. We aim to make precision agriculture the standard for every UK farmer.',
     accent: 'from-green-500 to-emerald-600',
     iconBg: 'bg-green-500',
     hoverBg: 'hover:bg-green-50',

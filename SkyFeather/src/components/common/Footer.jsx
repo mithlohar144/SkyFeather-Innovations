@@ -23,7 +23,7 @@ const Footer = () => (
     <div className="border-b border-white/8">
       <div className="container mx-auto px-6 py-14 flex flex-col md:flex-row items-center justify-between gap-8">
         <div>
-          <p className="text-xs text-white/60 uppercase tracking-widest font-semibold mb-2">Ready to get started?</p>
+          {/* <p className="text-xs text-white/60 uppercase tracking-widest font-semibold mb-2">Ready to get started?</p> */}
           <h2 className="text-2xl md:text-3xl font-extrabold leading-tight">
             Transform your farm with{' '}
             <span className="text-agri-green">SkyFeather Innovations</span>

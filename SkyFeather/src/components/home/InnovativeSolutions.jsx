@@ -15,7 +15,7 @@ const features = [
   },
   {
     title: ' Crop Analytics',
-    desc: 'Real-time NDVI analysis and AI-driven insights detect pests, disease, and nutrient deficiencies weeks before they become visible.',
+    desc: 'Real-time NDVI analysis and AI-driven insights, disease, and nutrient deficiencies weeks before they become visible.',
     highlight: false,
   },
 ];
@@ -59,7 +59,7 @@ const InnovativeSolutions = () => (
           href="/services"
           className="btn-interactive inline-flex items-center gap-3 bg-agri-dark text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-violet-600 hover:shadow-lg hover:shadow-violet-500/25 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300"
         >
-          More Service
+          Learn More
           <span className="w-7 h-7 rounded-full border border-white/30 flex items-center justify-center">
             <ArrowRight size={13} aria-hidden="true" />
           </span>
