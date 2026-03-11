@@ -6,7 +6,7 @@ import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import SEO from '../components/common/SEO';
 import mapping from '../assest/images/mapping.avif';
-import spraying from '../assest/images/Drone-Spraying.jpg';
+import spraying from '../assest/images/Drone-Spraying1.jpg';
 import spreading from '../assest/images/DroneSpreading.webp';
 
 const Services = () => {
@@ -84,7 +84,6 @@ const Services = () => {
                       className="w-full rounded-2xl h-52 object-cover group-hover:scale-105 transition-transform duration-500"
                       width={400}
                       height={208}
-                      loading="lazy"
                       decoding="async"
                     />
                   </div>
