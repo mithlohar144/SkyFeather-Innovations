@@ -4,9 +4,9 @@ import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import SprayingHero from '../components/spraying/SprayingHero';
 import SEO from '../components/common/SEO';
-import sprayingImageOne from '../assest/images/Drone-Spraying.jpg';
+import sprayingImageOne from '../assest/images/dron.jpg';
 import sprayingImageTwo from '../assest/images/spreying2.avif';
-import sprayingImageThree from '../assest/images/spreying3.avif';
+import sprayingImageThree from '../assest/images/shad.png';
 
 const Spraying = () => {
   const sprayingSections = [

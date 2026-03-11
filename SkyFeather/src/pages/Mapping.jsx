@@ -6,8 +6,8 @@ import MappingHero from '../components/mapping/MappingHero';
 import SEO from '../components/common/SEO';
 import mapping from '../assest/images/mapping.avif';
 import vegi from '../assest/images/map.png';
-import mapping2 from '../assest/images/WeedTreatment.jpg';
-import mapping3 from '../assest/images/DigitalSurfaceMaps.webp';
+import mapping2 from '../assest/images/weed.png';
+import mapping3 from '../assest/images/DigitalSurfaceMaps.jpg';
 const Mapping = () => {
   const mappingSections = [
     {

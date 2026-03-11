@@ -43,7 +43,7 @@ const ServiceGrid = () => {
               <span className="text-agri-green font-semibold uppercase tracking-widest text-xs">What We Do</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-extrabold text-agri-dark leading-tight">
-              Our Specialized<br />Services
+              Our specialised<br />Services
             </h2>
           </div>
           <p className="text-gray-400 max-w-xs text-sm leading-relaxed md:text-right">
