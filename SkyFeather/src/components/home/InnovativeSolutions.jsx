@@ -10,11 +10,11 @@ const features = [
   },
   {
     title: 'Smart Irrigation System',
-    desc: "Multispectral mapping identifies moisture-stressed zones so you apply water only where it's needed — cutting usage by up to 90%.",
+    desc: "Multispectral mapping identifies moisture-stressed zones so you apply water only where it's needed most, saving water and improving crop health.",
     highlight: true,
   },
   {
-    title: 'AI Crop Analytics',
+    title: ' Crop Analytics',
     desc: 'Real-time NDVI analysis and AI-driven insights detect pests, disease, and nutrient deficiencies weeks before they become visible.',
     highlight: false,
   },

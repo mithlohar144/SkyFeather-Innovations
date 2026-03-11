@@ -14,7 +14,7 @@ const Spraying = () => {
       title: 'Biostimulants & Natural Pest Control Products',
       imageAlt: 'Aerial view of wheat field landscape',
       imageSrc: sprayingImageOne,
-      imageLabels: ['Wheat Field Landscape', 'Wheat Field Landscape'],
+      imageLabels: ['Wheat Field Landscape'],
       description:
         'Our drones can apply a wide range of biostimulant products, including seaweed-based fertilisers, humic substances, and other plant-based solutions. These treatments help crops absorb nutrients more effectively, cope better with stress, and support the plant\'s own natural defence systems.',
       extraDescription:
@@ -77,9 +77,7 @@ const Spraying = () => {
                       loading="lazy"
                       decoding="async"
                     />
-                    <figcaption className="px-4 py-3 text-sm text-gray-600 bg-white/80">
-                      {section.imageLabels.join(' | ')}
-                    </figcaption>
+                    
                   </figure>
 
                   <div className={`flex items-center justify-center px-8 md:px-14 py-12 lg:py-16 bg-[#e8e8ea] ${reverseDesktop ? 'lg:order-1' : ''}`}>

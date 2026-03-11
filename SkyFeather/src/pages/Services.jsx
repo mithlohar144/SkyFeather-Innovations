@@ -112,7 +112,7 @@ const Services = () => {
             <blockquote className="text-xl sm:text-2xl md:text-3xl text-agri-dark font-light leading-relaxed">
               "The drone imagery and crop health map were particularly helpful in identifying areas of concern within the field that would have been difficult to detect through conventional ground inspections".
             </blockquote>
-            <p className="mt-6 text-agri-dark font-semibold">— James, Farmer from York</p>
+            <p className="mt-6 text-agri-dark font-semibold">James, Farmer </p>
           </motion.div>
         </section>
       </div>

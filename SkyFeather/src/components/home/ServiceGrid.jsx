@@ -6,7 +6,7 @@ import MultispectralMapping from '../../assest/images/mapping.avif'
 const services = [
   {
     title: "Drone Spraying",
-    desc: "Precision liquid application for crops with up to 90% less water usage and zero soil compaction.",
+    desc: "Precision liquid application for crops with reduced waste and no soil compaction.",
     icon: Droplets,
     link: "/services/drone-spraying",
     image: DroneSpraying,
@@ -22,7 +22,7 @@ const services = [
   },
   {
     title: "Multispectral Mapping",
-    desc: "Advanced crop health analysis using NDVI sensors to detect pests, stress, and nutrient deficiencies.",
+    desc: "Advanced crop health analysis using NDVI sensors , stress, and nutrient deficiencies.",
     icon: Target,
     link: "/services/multispectral-mapping",
     image: MultispectralMapping,

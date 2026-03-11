@@ -98,15 +98,15 @@ const Footer = () => (
               <span className="w-8 h-8 bg-white/6 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-agri-green/20 transition">
                 <Mail size={13} className="text-agri-green" />
               </span>
-              <span className="text-sm text-white/60 group-hover:text-agri-green transition">email@example.com</span>
+              <span className="text-sm text-white/60 group-hover:text-agri-green transition">sm.muraad@gmail.com</span>
             </a>
           </li>
           <li>
-            <a href="tel:5555555555" className="flex items-center gap-3 group">
+            <a href="tel:07415610262" className="flex items-center gap-3 group">
               <span className="w-8 h-8 bg-white/6 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-agri-green/20 transition">
                 <Phone size={13} className="text-agri-green" />
               </span>
-              <span className="text-sm text-white/60 group-hover:text-agri-green transition">(555) 555-5555</span>
+              <span className="text-sm text-white/60 group-hover:text-agri-green transition">07415 610262</span>
             </a>
           </li>
         </ul>
