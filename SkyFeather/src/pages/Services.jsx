@@ -101,7 +101,7 @@ const Services = () => {
           </div>
         </section>
 
-        <section className="py-10 sm:py-12 md:py-16 bg-white px-4 sm:px-6 md:px-8">
+        <section className="pt-0 pb-10 sm:pt-0 sm:pb-12 md:pt-0 md:pb-16 bg-white px-4 sm:px-4 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -112,6 +112,7 @@ const Services = () => {
             <blockquote className="text-xl sm:text-2xl md:text-3xl text-agri-dark font-light leading-relaxed">
               "The drone imagery and crop health map were particularly helpful in identifying areas of concern within the field that would have been difficult to detect through conventional ground inspections".
             </blockquote>
+            <p className="mt-6 text-agri-dark font-semibold">— James, Farmer from York</p>
           </motion.div>
         </section>
       </div>

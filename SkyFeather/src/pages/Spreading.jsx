@@ -4,9 +4,9 @@ import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import SpreadingHero from '../components/spreading/SpreadingHero';
 import SEO from '../components/common/SEO';
-import spreadingImageOne from '../assest/images/crop.avif';
-import spreadingImageTwo from '../assest/images/fertiliser.avif';
-import spreadingImageThree from '../assest/images/pelleted.avif';
+import spreadingImageOne from '../assest/images/seed.avif';
+import spreadingImageTwo from '../assest/images/dronepic.jpg';
+import spreadingImageThree from '../assest/images/Natural.jpg';
 
 const Spreading = () => {
   const spreadingSections = [
