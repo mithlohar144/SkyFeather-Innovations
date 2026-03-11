@@ -14,7 +14,6 @@ const Spreading = () => {
       title: 'Cover Crops & Other Seeds',
       imageAlt: 'Hands holding grains ready for aerial spreading',
       imageSrc: spreadingImageOne,
-      imageLabels: ['Hands Holding Grains', 'Hands Holding Grains'],
       description:
         'Our drones can broadcast a wide range of seeds, from cover crops and catch crops to grass, oilseed rape, wildflowers, and even trees, all from the air.',
       extraDescription:
@@ -24,7 +23,6 @@ const Spreading = () => {
       title: 'Fertiliser',
       imageAlt: 'Agricultural gardens and crop area for fertiliser spreading',
       imageSrc: spreadingImageTwo,
-      imageLabels: ['Agricultural Gardens', 'Field at Sunset'],
       description:
         'Our drones can apply all types of fertilisers, from granular to liquid, entirely from the air. This avoids soil compaction, ruts, and muddy tracks, and allows crops to receive treatment exactly when they need it, without waiting for ground conditions suitable for heavy machinery.'
     },
@@ -32,7 +30,6 @@ const Spreading = () => {
       title: 'Pelleted Natural Products',
       imageAlt: 'Aerial agricultural field for pelleted natural product application',
       imageSrc: spreadingImageThree,
-      imageLabels: ['Agricultural Gardens'],
       description:
         'In addition to conventional fertilisers and standard granular products, our drones can also spread pelleted materials such as fungal pellets, biochar, and other specialty products.',
       extraDescription:
@@ -75,9 +72,7 @@ const Spreading = () => {
                       loading="lazy"
                       decoding="async"
                     />
-                    <figcaption className="px-4 py-3 text-sm text-gray-600 bg-white/80">
-                      {section.imageLabels.join(' | ')}
-                    </figcaption>
+                    
                   </figure>
 
                   <div className={`flex items-center justify-center px-8 md:px-14 py-12 lg:py-16 bg-[#e8e8ea] ${reverseDesktop ? 'lg:order-1' : ''}`}>
