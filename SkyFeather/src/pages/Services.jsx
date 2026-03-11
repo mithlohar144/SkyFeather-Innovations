@@ -8,7 +8,6 @@ import SEO from '../components/common/SEO';
 import mapping from '../assest/images/mapping.avif';
 import spraying from '../assest/images/Drone-Spraying.jpg';
 import spreading from '../assest/images/DroneSpreading.webp';
-import farmer from '../assest/images/farmer.avif';
 
 const Services = () => {
   const overviewServices = [
@@ -102,28 +101,17 @@ const Services = () => {
           </div>
         </section>
 
-        <section className="py-10 sm:py-12 md:py-16 flex flex-col md:flex-row bg-white gap-6 md:gap-8 px-4 sm:px-6 md:px-8">
+        <section className="py-10 sm:py-12 md:py-16 bg-white px-4 sm:px-6 md:px-8">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="w-full md:w-1/2 flex items-center justify-center overflow-hidden rounded-2xl"
-          >
-            <img className='rounded-2xl w-full h-72 sm:h-96 md:h-full object-cover hover:scale-105 transition-transform duration-700' src={farmer} alt="James, a farmer from York, in his field" width={600} height={400} loading="lazy" decoding="async" />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="w-full md:w-1/2 max-w-4xl flex flex-col justify-center mx-auto px-2 sm:px-4 md:px-6 text-center"
+            className="max-w-4xl flex flex-col justify-center mx-auto px-2 sm:px-4 md:px-6 text-center"
           >
             <blockquote className="text-xl sm:text-2xl md:text-3xl text-agri-dark font-light leading-relaxed">
               "The drone imagery and crop health map were particularly helpful in identifying areas of concern within the field that would have been difficult to detect through conventional ground inspections".
             </blockquote>
-            
-            <p className="mt-6 md:mt-8 text-agri-dark font-semibold">James, Farmer from York</p>
           </motion.div>
         </section>
       </div>
