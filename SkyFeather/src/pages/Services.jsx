@@ -1,7 +1,7 @@
 // src/pages/Services.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+
 import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import SEO from '../components/common/SEO';
@@ -50,31 +50,17 @@ const Services = () => {
       <div className="pt-20">
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6 text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-5xl font-bold text-agri-dark"
-            >
+            <h1 className="text-5xl font-bold text-agri-dark">
               Our Services
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-agri-dark/80 text-2xl mt-4"
-            >
+            </h1>
+            <p className="text-agri-dark/80 text-2xl mt-4">
               Providing Everything You Need
-            </motion.p>
+            </p>
 
             <div className="grid md:grid-cols-3 gap-8 mt-14 text-left">
               {overviewServices.map((service, index) => (
-                <motion.article
+                <article
                   key={service.title}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.12, duration: 0.5 }}
                   className="group bg-[#f5f5f7] rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="overflow-hidden">
@@ -94,25 +80,21 @@ const Services = () => {
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>
                     </Link>
                   </div>
-                </motion.article>
+                </article>
               ))}
             </div>
           </div>
         </section>
 
         <section className="pt-0 pb-10 sm:pt-0 sm:pb-12 md:pt-0 md:pb-16 bg-white px-4 sm:px-4 md:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="max-w-4xl flex flex-col justify-center mx-auto px-2 sm:px-4 md:px-6 text-center"
           >
             <blockquote className="text-xl sm:text-2xl md:text-3xl text-agri-dark font-light leading-relaxed">
               "The drone imagery and crop health map were particularly helpful in identifying areas of concern within the field that would have been difficult to detect through conventional ground inspections".
             </blockquote>
             <p className="mt-6 text-agri-dark font-semibold">James, Farmer </p>
-          </motion.div>
+          </div>
         </section>
       </div>
       <Footer />
