@@ -44,7 +44,7 @@ const InnovativeSolutions = () => (
           transition={{ delay: 0.1 }}
           className="text-gray-500 text-base font-semibold leading-relaxed max-w-xs lg:text-right"
         >
-          Our planet's population is growing rapidly and so is the need for more food. SkyFeather is here to make farming smarter, more efficient, and sustainable.
+          SkyFeather is here to make farming smarter, more efficient, and sustainable.
         </motion.p>
       </div>
 
