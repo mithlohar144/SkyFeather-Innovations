@@ -25,7 +25,7 @@ const AboutHero = () => (
           with Smarter Farm Management
         </h1>
         <p className="mt-7 text-white/55 text-[1.05rem] leading-relaxed">
-          Our drones deliver precise crop monitoring, field mapping, and targeted spraying and spreading — giving you actionable insights that save time, reduce waste, and boost yields.
+          Our drones deliver precise crop monitoring, field mapping, and targeted spraying and spreading. Giving you actionable insights that save time, reduce waste, and boost yields.
         </p>
         <p className="mt-4 text-white/55 text-[1.05rem] leading-relaxed">
           We combine technology with practical farming expertise to help you make confident decisions and get the most from every acre.
