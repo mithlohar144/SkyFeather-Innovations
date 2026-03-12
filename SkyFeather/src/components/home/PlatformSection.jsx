@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import droneImage from '../../assest/images/drone.png'
 import spreying2 from '../../assest/images/spreying2.avif'
 const PlatformSection = () => (
-  <section className="py-28 bg-gray-50">
+  <section className="py-18 bg-gray-50">
     <div className="container mx-auto px-6">
       {/* Heading */}
       <motion.div
