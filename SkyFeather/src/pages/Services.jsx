@@ -54,7 +54,7 @@ const Services = () => {
               Our Services
             </h1>
             <p className="text-agri-dark/80 text-2xl mt-4">
-              Providing Everything You Need
+              Delivering Everything You Need
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mt-14 text-left">
