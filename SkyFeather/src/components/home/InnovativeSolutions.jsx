@@ -21,7 +21,7 @@ const features = [
 ];
 
 const InnovativeSolutions = () => (
-  <section className="py-24 bg-white">
+  <section className="pt-4 pb-24 bg-white">
     <div className="container mx-auto px-6">
 
       {/* Top Row: Heading left, description right */}
