@@ -52,7 +52,7 @@ const MissionVision = () => (
           Mission, Vision & Approach
         </h2>
         <p className="text-gray-500 mt-4 leading-relaxed">
-          Three pillars that guide everything we build, every field we serve, and every farmer we work with.
+          Three pillars that guide everything we build.
         </p>
       </motion.div>
 
