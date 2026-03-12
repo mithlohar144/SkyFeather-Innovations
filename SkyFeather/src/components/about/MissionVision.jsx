@@ -15,7 +15,7 @@ const cards = [
   {
     icon: Eye,
     title: 'Our Vision',
-    desc: 'To be the leading force in precision agriculture — creating a future where technology and nature thrive together, ensuring food security through innovative, data-driven solutions.',
+    desc: 'To be the leading force in precision agriculture creating a future where technology and nature thrive together, ensuring food security through innovative, data-driven solutions.',
     accent: 'from-blue-500 to-indigo-600',
     iconBg: 'bg-blue-500',
     hoverBg: 'hover:bg-blue-50',
