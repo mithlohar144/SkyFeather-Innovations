@@ -14,7 +14,7 @@ const services = [
   },
   {
     title: "Drone Spreading",
-    desc: "Efficient granular distribution for fertilizers, seeds, and feed across challenging terrains.",
+    desc: "Efficient granular distribution for fertiliser, seeds, and feed across challenging terrains.",
     icon: Sprout,
     link: "/services/drone-spreading",
     image: DroneSpreading,
