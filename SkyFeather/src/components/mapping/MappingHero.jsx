@@ -48,7 +48,7 @@ const MappingHero = () => (
         transition={{ duration: 0.5, delay: 0.15 }}
         className="text-white/80 mt-4 font-light text-lg md:text-xl "
       >
-        Providing Everything You Need to Maximize Yields
+        Providing Everything You Need to Maximise Yields
       </motion.p>
 
       <motion.p
