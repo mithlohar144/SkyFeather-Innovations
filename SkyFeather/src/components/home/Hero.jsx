@@ -25,7 +25,7 @@ const Hero = () => (
       >
         Precision Farming
         <span className="flex flex-wrap gap-2 items-center mt-2 sm:mt-4">
-          Using Drones:{' '}
+          Using Drones{' '}
           <span className="relative inline-block">
             <span className="relative z-10 text-4xl sm:text-4xl flex text-center px-3 sm:px-4 py-2 sm:py-3 font-light text-[#a3e635]">Technology</span>
             <span className="absolute inset-0 bg-[#a3e635]/15 rounded-3xl z-0" />
