@@ -33,7 +33,13 @@ const About = () => {
           <div className="container mx-auto px-6">
 
             {/* Header row */}
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+           <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+              className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16"
+            >
               <div>
                 <span className="inline-flex items-center gap-2 text-agri-green font-bold uppercase tracking-widest text-xs mb-4">
                   <span className="w-1.5 h-1.5 rounded-full bg-agri-green" />
@@ -46,8 +52,7 @@ const About = () => {
               <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
                 The principles behind every decision, every flight, and every farm we serve.
               </p>
-            </div>
-
+            </motion.div>
             {/* Cards */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {values.map((item, idx) => (
@@ -96,7 +101,13 @@ const About = () => {
 
         {/* CTA */}
         <section className="py-20 bg-agri-dark text-white text-center">
-          <div className="container mx-auto px-6">
+         <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+            className="container mx-auto px-6"
+          >
             <h2 className="text-3xl md:text-4xl font-bold max-w-2xl mx-auto leading-tight">
               Ready to transform your farm with <span className="text-agri-green">SkyFeather Innovations</span>?
             </h2>
@@ -111,7 +122,7 @@ const About = () => {
                 View Services
               </a>
             </div>
-          </div>
+          </motion.div>
         </section>
       </div>
       <Footer />
