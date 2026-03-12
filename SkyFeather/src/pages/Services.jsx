@@ -50,11 +50,11 @@ const Services = () => {
       <div className="pt-20">
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-5xl font-bold text-agri-dark">
+            <h1 className="text-5xl font-medium font-bold text-agri-dark">
               Our Services
             </h1>
-            <p className="text-agri-dark/80 text-2xl mt-4">
-              Delivering Everything You Need
+            <p className="text-agri-dark/80  font-light text-2xl mt-4">
+              Providing What You Need
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mt-14 text-left">
