@@ -55,7 +55,7 @@ const PlatformSection = () => (
             Precision Farming That Drives Real Results
           </h3>
           <p className="text-gray-500 leading-relaxed text-lg">
-            Our planet's population is growing rapidly — and so is the need for smarter agriculture. SkyFeather's drone-powered platform helps farmers monitor crop health, optimise input usage, and boost yields while reducing environmental impact.
+            SkyFeather's drone-powered platform helps farmers monitor crop health, optimise input usage, and boost yields while reducing environmental impact.
           </p>
           <div className="flex items-center gap-4 pt-2">
             <a
