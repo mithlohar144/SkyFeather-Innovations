@@ -59,10 +59,10 @@ const PlatformSection = () => (
           </p>
           <div className="flex items-center gap-4 pt-2">
             <a
-              href="/services"
+              href="/contact"
               className="btn-interactive bg-agri-dark text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/25 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 inline-flex items-center gap-2"
             >
-              Discover Our Solutions
+              Contact Us
               <a
               href="/contact"
               aria-label="Contact us"
